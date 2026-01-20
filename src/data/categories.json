@@ -1,0 +1,176 @@
+{
+  "categories": [
+    {
+      "id": "basics",
+      "name": "۱. مقدماتی",
+      "namePashto": "۱. بنسټیز",
+      "nameFa": "مقدماتی",
+      "icon": "BookOpen",
+      "color": "#22c55e",
+      "description": "شروع یادگیری پښتو از صفر",
+      "order": 1,
+      "lessons": [
+        { "id": "alphabet-intro", "title": "آشنایی با الفبا", "titleFa": "آشنایی با الفبا", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "unique-letters", "title": "حروف خاص پښتو", "titleFa": "حروف خاص پښتو", "difficulty": "easy", "duration": "۲۰ دقیقه" },
+        { "id": "kandahari-sounds", "title": "صداهای کندهاری", "titleFa": "صداهای کندهاری", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "vowels", "title": "مصوت‌ها", "titleFa": "مصوت‌ها", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "numbers-1-10", "title": "اعداد ۱ تا ۱۰", "titleFa": "اعداد ۱ تا ۱۰", "difficulty": "easy", "duration": "۱۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "greetings",
+      "name": "۲. سلام و احوالپرسی",
+      "namePashto": "۲. سلام او حال احوال",
+      "nameFa": "سلام و احوالپرسی",
+      "icon": "MessageCircle",
+      "color": "#ec4899",
+      "description": "سلام کردن و احوالپرسی روزمره",
+      "order": 2,
+      "lessons": [
+        { "id": "basic-greetings", "title": "سلام و خداحافظی", "titleFa": "سلام و خداحافظی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "how-are-you", "title": "حالت چطور است؟", "titleFa": "حالت چطور است؟", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "introductions", "title": "معرفی خود", "titleFa": "معرفی خود", "difficulty": "easy", "duration": "۲۰ دقیقه" },
+        { "id": "formal-informal", "title": "رسمی و غیررسمی", "titleFa": "رسمی و غیررسمی", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "pronouns-basics",
+      "name": "۳. ضمایر و پایه‌ها",
+      "namePashto": "۳. ضمیرونه او بنسټونه",
+      "nameFa": "ضمایر و پایه‌ها",
+      "icon": "Users",
+      "color": "#3b82f6",
+      "description": "ضمایر شخصی و ساختار پایه",
+      "order": 3,
+      "lessons": [
+        { "id": "pronouns", "title": "ضمایر شخصی", "titleFa": "ضمایر شخصی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "possessive-pronouns", "title": "ضمایر ملکی", "titleFa": "ضمایر ملکی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "demonstratives", "title": "ضمایر اشاره", "titleFa": "ضمایر اشاره", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "sentence-structure", "title": "ساختار جمله SOV", "titleFa": "ساختار جمله SOV", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "verbs-present",
+      "name": "۴. فعل حال",
+      "namePashto": "۴. اوسمهال فعلونه",
+      "nameFa": "فعل حال",
+      "icon": "Play",
+      "color": "#f59e0b",
+      "description": "گردان فعل‌ها در زمان حال",
+      "order": 4,
+      "lessons": [
+        { "id": "verb-to-be", "title": "فعل بودن (یم/دی)", "titleFa": "فعل بودن (یم/دی)", "difficulty": "easy", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-go", "title": "فعل رفتن (ځم)", "titleFa": "فعل رفتن (ځم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-come", "title": "فعل آمدن (راځم)", "titleFa": "فعل آمدن (راځم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-eat", "title": "فعل خوردن (خورم)", "titleFa": "فعل خوردن (خورم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-drink", "title": "فعل نوشیدن (څښم)", "titleFa": "فعل نوشیدن (څښم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-do", "title": "فعل کردن (کوم)", "titleFa": "فعل کردن (کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" }
+      ]
+    },
+    {
+      "id": "vocabulary-basic",
+      "name": "۵. واژگان پایه",
+      "namePashto": "۵. بنسټیز لغات",
+      "nameFa": "واژگان پایه",
+      "icon": "Library",
+      "color": "#14b8a6",
+      "description": "کلمات ضروری روزمره",
+      "order": 5,
+      "lessons": [
+        { "id": "family", "title": "خانواده", "titleFa": "خانواده", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "numbers-11-100", "title": "اعداد ۱۱ تا ۱۰۰", "titleFa": "اعداد ۱۱ تا ۱۰۰", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "food", "title": "غذا و نوشیدنی", "titleFa": "غذا و نوشیدنی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "body-parts", "title": "اعضای بدن", "titleFa": "اعضای بدن", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "colors", "title": "رنگ‌ها", "titleFa": "رنگ‌ها", "difficulty": "easy", "duration": "۱۰ دقیقه" },
+        { "id": "days-months", "title": "روزها و ماه‌ها", "titleFa": "روزها و ماه‌ها", "difficulty": "easy", "duration": "۱۵ دقیقه" }
+      ]
+    },
+    {
+      "id": "verbs-past",
+      "name": "۶. فعل گذشته",
+      "namePashto": "۶. تېرمهال فعلونه",
+      "nameFa": "فعل گذشته",
+      "icon": "Clock",
+      "color": "#8b5cf6",
+      "description": "گردان فعل‌ها در زمان گذشته",
+      "order": 6,
+      "lessons": [
+        { "id": "past-simple", "title": "گذشته ساده", "titleFa": "گذشته ساده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
+        { "id": "past-to-go", "title": "رفتم (لاړم)", "titleFa": "رفتم (لاړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-come", "title": "آمدم (راغلم)", "titleFa": "آمدم (راغلم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-eat", "title": "خوردم (وخوړم)", "titleFa": "خوردم (وخوړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-do", "title": "کردم (وکړم)", "titleFa": "کردم (وکړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-see", "title": "دیدم (ولیدم)", "titleFa": "دیدم (ولیدم)", "difficulty": "medium", "duration": "۲۵ دقیقه" }
+      ]
+    },
+    {
+      "id": "grammar-intermediate",
+      "name": "۷. دستور زبان میانی",
+      "namePashto": "۷. منځنی ګرامر",
+      "nameFa": "دستور زبان میانی",
+      "icon": "BookOpen",
+      "color": "#ef4444",
+      "description": "قواعد دستوری پیشرفته‌تر",
+      "order": 7,
+      "lessons": [
+        { "id": "gender", "title": "جنسیت اسم‌ها", "titleFa": "جنسیت اسم‌ها", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "plural", "title": "جمع بستن", "titleFa": "جمع بستن", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "adjectives", "title": "صفت‌ها", "titleFa": "صفت‌ها", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "prepositions", "title": "حروف اضافه", "titleFa": "حروف اضافه", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "questions", "title": "جملات سوالی", "titleFa": "جملات سوالی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "negation", "title": "جملات منفی", "titleFa": "جملات منفی", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "verbs-future",
+      "name": "۸. فعل آینده و امری",
+      "namePashto": "۸. راتلونکي او امري فعلونه",
+      "nameFa": "فعل آینده و امری",
+      "icon": "ArrowRight",
+      "color": "#06b6d4",
+      "description": "زمان آینده و دستوری",
+      "order": 8,
+      "lessons": [
+        { "id": "future-tense", "title": "زمان آینده", "titleFa": "زمان آینده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
+        { "id": "imperative", "title": "فعل امری", "titleFa": "فعل امری", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "imperative-formal", "title": "امری رسمی", "titleFa": "امری رسمی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "requests", "title": "درخواست کردن", "titleFa": "درخواست کردن", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "conversations",
+      "name": "۹. مکالمات روزمره",
+      "namePashto": "۹. ورځنۍ خبرې",
+      "nameFa": "مکالمات روزمره",
+      "icon": "MessageSquare",
+      "color": "#f97316",
+      "description": "مکالمات عملی در موقعیت‌های مختلف",
+      "order": 9,
+      "lessons": [
+        { "id": "conv-shopping", "title": "در بازار", "titleFa": "در بازار", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "conv-restaurant", "title": "در رستوران", "titleFa": "در رستوران", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "conv-taxi", "title": "در تاکسی", "titleFa": "در تاکسی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "conv-phone", "title": "مکالمه تلفنی", "titleFa": "مکالمه تلفنی", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "conv-doctor", "title": "در مطب داکتر", "titleFa": "در مطب داکتر", "difficulty": "hard", "duration": "۳۰ دقیقه" },
+        { "id": "conv-guest", "title": "مهمانی", "titleFa": "مهمانی", "difficulty": "medium", "duration": "۲۵ دقیقه" }
+      ]
+    },
+    {
+      "id": "advanced",
+      "name": "۱۰. پیشرفته",
+      "namePashto": "۱۰. پرمختللی",
+      "nameFa": "پیشرفته",
+      "icon": "Star",
+      "color": "#a855f7",
+      "description": "موضوعات پیشرفته و اصطلاحات",
+      "order": 10,
+      "lessons": [
+        { "id": "retroflex", "title": "صداهای برگشته", "titleFa": "صداهای برگشته", "difficulty": "hard", "duration": "۲۵ دقیقه" },
+        { "id": "idioms", "title": "اصطلاحات", "titleFa": "اصطلاحات", "difficulty": "hard", "duration": "۳۰ دقیقه" },
+        { "id": "proverbs", "title": "ضرب‌المثل‌ها", "titleFa": "ضرب‌المثل‌ها", "difficulty": "hard", "duration": "۳۰ دقیقه" },
+        { "id": "kandahari-slang", "title": "اصطلاحات کندهاری", "titleFa": "اصطلاحات کندهاری", "difficulty": "hard", "duration": "۲۵ دقیقه" }
+      ]
+    }
+  ]
+}
