@@ -530,14 +530,67 @@ export const alphabet = [
   {
     id: 'ye',
     letter: 'ی',
-    name: 'ی',
+    name: 'ی (یے)',
     namePashto: 'ی',
-    sound: '/j, i, ai/',
-    latinEquivalent: 'y, i, ay',
+    sound: '/j, i, ai, iː, ə/',
+    soundEnglish: 'y (as in "yes"), ee (as in "see"), ay (as in "say"), long-ee, schwa',
+    latinEquivalent: 'y, i, ay, ī, ə',
     category: 'vowel',
+    description: 'The letter ی has 5 different types with different pronunciations depending on position and function in the word',
+    types: [
+      {
+        type: 1,
+        name: 'ی as initial consonant',
+        sound: '/j/',
+        englishSound: 'y (as in "yes")',
+        position: 'Beginning of word',
+        example: { word: 'یو', meaning: 'یک', transliteration: 'yo', englishSound: 'yo (like "yoke")' },
+        description: 'When ی appears at the start of a word, it functions as a consonant with a y-sound'
+      },
+      {
+        type: 2,
+        name: 'ی as final vowel (short)',
+        sound: '/i/',
+        englishSound: 'ee (as in "see")',
+        position: 'End of word',
+        example: { word: 'ملی', meaning: 'ملی', transliteration: 'milli', englishSound: 'mil-lee (like "silly")' },
+        description: 'When ی appears at the end of a word, it functions as a short vowel with an ee-sound'
+      },
+      {
+        type: 3,
+        name: 'ی as final vowel (diphthong)',
+        sound: '/ai/ or /əi/',
+        englishSound: 'ay (as in "say")',
+        position: 'End of word after consonant',
+        example: { word: 'سړی', meaning: 'مرد', transliteration: 'saṛay', englishSound: 'sar-ay (like "say")' },
+        description: 'When ی appears at the end after a consonant, it creates a diphthong sound (ay or əy)'
+      },
+      {
+        type: 4,
+        name: 'ی as long vowel',
+        sound: '/iː/',
+        englishSound: 'long-ee (as in "tree")',
+        position: 'Middle or end of word',
+        example: { word: 'کی', meaning: 'کی', transliteration: 'kī', englishSound: 'kee (like "tree")' },
+        description: 'When ی represents a long vowel, it has an extended ee-sound'
+      },
+      {
+        type: 5,
+        name: 'ی as schwa vowel',
+        sound: '/ə/',
+        englishSound: 'uh (as in "about")',
+        position: 'Unstressed syllables',
+        example: { word: 'بچی', meaning: 'بچه', transliteration: 'bəchay', englishSound: 'buh-chay' },
+        description: 'In unstressed syllables, ی can represent a schwa sound (ə)'
+      }
+    ],
+    kandahariNotes: 'In Kandahari dialect, the retroflex sounds (ش/ښ) can vary. For example: راشه (rāsha) may be pronounced as راسه (rāsa), and ولارشه (walārsha) may be pronounced as ولارسه (walārsa). This shows dialectal variation in retroflex consonants.',
     examples: [
-      { word: 'یو', meaning: 'یک', transliteration: 'yo' },
-      { word: 'سړی', meaning: 'مرد', transliteration: 'saṛay' },
+      { word: 'یو', meaning: 'یک', transliteration: 'yo', englishSound: 'yo (like "yoke")', type: 1 },
+      { word: 'سړی', meaning: 'مرد', transliteration: 'saṛay', englishSound: 'sar-ay (like "say")', type: 3 },
+      { word: 'ملی', meaning: 'ملی', transliteration: 'milli', englishSound: 'mil-lee (like "silly")', type: 2 },
+      { word: 'کی', meaning: 'کی', transliteration: 'kī', englishSound: 'kee (like "tree")', type: 4 },
+      { word: 'بچی', meaning: 'بچه', transliteration: 'bəchay', englishSound: 'buh-chay', type: 5 },
     ],
   },
   {

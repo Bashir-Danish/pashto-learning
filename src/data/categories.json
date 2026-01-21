@@ -69,6 +69,19 @@
       ]
     },
     {
+      "id": "verbs-comprehensive",
+      "name": "۴.۵ فعل‌های جامع",
+      "namePashto": "۴.۵ د فعلونو مجموعه",
+      "nameFa": "فعل‌های جامع",
+      "icon": "Play",
+      "color": "#f59e0b",
+      "description": "فعل‌های اساسی در تمام زمان‌ها",
+      "order": 4.5,
+      "lessons": [
+        { "id": "comprehensive-verbs", "title": "فعل‌های اساسی - تمام زمان‌ها", "titleFa": "فعل‌های اساسی - تمام زمان‌ها", "difficulty": "hard", "duration": "۴۵ دقیقه" }
+      ]
+    },
+    {
       "id": "vocabulary-basic",
       "name": "۵. واژگان پایه",
       "namePashto": "۵. بنسټیز لغات",
@@ -169,7 +182,9 @@
         { "id": "retroflex", "title": "صداهای برگشته", "titleFa": "صداهای برگشته", "difficulty": "hard", "duration": "۲۵ دقیقه" },
         { "id": "idioms", "title": "اصطلاحات", "titleFa": "اصطلاحات", "difficulty": "hard", "duration": "۳۰ دقیقه" },
         { "id": "proverbs", "title": "ضرب‌المثل‌ها", "titleFa": "ضرب‌المثل‌ها", "difficulty": "hard", "duration": "۳۰ دقیقه" },
-        { "id": "kandahari-slang", "title": "اصطلاحات کندهاری", "titleFa": "اصطلاحات کندهاری", "difficulty": "hard", "duration": "۲۵ دقیقه" }
+        { "id": "kandahari-slang", "title": "اصطلاحات کندهاری", "titleFa": "اصطلاحات کندهاری", "difficulty": "hard", "duration": "۲۵ دقیقه" },
+        { "id": "advanced-food-cooking", "title": "کولو (Cooking)", "titleFa": "کولو (Cooking)", "difficulty": "hard", "duration": "۲۵ دقیقه" },
+        { "id": "advanced-body-parts", "title": "جسم کے حصے", "titleFa": "جسم کے حصے", "difficulty": "hard", "duration": "۲۵ دقیقه" }
       ]
     }
   ]

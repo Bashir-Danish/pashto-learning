@@ -27,6 +27,9 @@ import { verbToDrinkLesson } from './verb-to-drink';
 import { verbToDoLesson } from './verb-to-do';
 import { verbToWantLesson } from './verb-to-want';
 
+// ۴.۵ فعل‌های جامع (Comprehensive Verbs - All Tenses)
+import { comprehensiveVerbsLesson } from './comprehensive-verbs';
+
 // ۵. واژگان پایه (Basic Vocabulary)
 import { familyLesson } from './family';
 import { numbers11to100Lesson } from './numbers-11-100';
@@ -70,6 +73,8 @@ import { retroflexLesson } from './retroflex';
 import { idiomsLesson } from './idioms';
 import { proverbsLesson } from './proverbs';
 import { kandahariSlangLesson } from './kandahari-slang';
+import { advancedFoodCookingLesson } from './advanced-food-cooking';
+import { advancedBodyPartsLesson } from './advanced-body-parts';
 
 import categoriesData from '../categories.json';
 
@@ -102,6 +107,7 @@ export const lessons = [
   verbToDrinkLesson,
   verbToDoLesson,
   verbToWantLesson,
+  comprehensiveVerbsLesson,
   
   // ۵. واژگان پایه
   familyLesson,
@@ -146,6 +152,8 @@ export const lessons = [
   idiomsLesson,
   proverbsLesson,
   kandahariSlangLesson,
+  advancedFoodCookingLesson,
+  advancedBodyPartsLesson,
 ];
 
 // Get lesson by ID

@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Map, CheckCircle2, Circle, ChevronDown, ChevronUp, 
   BookOpen, MessageCircle, Users, Play, Library, Clock, 
   ArrowRight, Star, Target, Zap, Trophy
 } from 'lucide-react';
+import { useProgress } from '../contexts/ProgressContext';
 
 const roadmapData = [
   {
@@ -86,6 +87,7 @@ const roadmapData = [
       'فعل‌های حرکتی (ځم، راځم)',
       'فعل‌های روزمره (خورم، څښم، کوم)',
       'فعل خواستن (غواړم)',
+      'فعل‌های اساسی در تمام زمان‌ها',
     ],
     lessons: [
       { id: 'verb-to-be', title: 'فعل بودن' },
@@ -95,8 +97,9 @@ const roadmapData = [
       { id: 'verb-to-drink', title: 'فعل نوشیدن' },
       { id: 'verb-to-do', title: 'فعل کردن' },
       { id: 'verb-to-want', title: 'فعل خواستن' },
+      { id: 'comprehensive-verbs', title: 'فعل‌های اساسی - تمام زمان‌ها' },
     ],
-    tips: 'از صفحه صرف فعل استفاده کنید. هر فعل را با تمام ضمایر تمرین کنید.',
+    tips: 'از صفحه صرف فعل استفاده کنید. هر فعل را با تمام ضمایر تمرین کنید. درس جامع فعل‌ها را برای یادگیری تمام زمان‌ها ببینید.',
   },
   {
     phase: 5,
@@ -110,6 +113,7 @@ const roadmapData = [
       'اعضای خانواده',
       'اعداد ۱ تا ۱۰۰',
       'غذا و نوشیدنی',
+      'اعضای بدن',
       'رنگ‌ها و روزها',
     ],
     lessons: [
@@ -117,6 +121,7 @@ const roadmapData = [
       { id: 'numbers-1-10', title: 'اعداد ۱-۱۰' },
       { id: 'numbers-11-100', title: 'اعداد ۱۱-۱۰۰' },
       { id: 'food', title: 'غذا و نوشیدنی' },
+      { id: 'body-parts', title: 'اعضای بدن' },
       { id: 'colors', title: 'رنگ‌ها' },
       { id: 'days-months', title: 'روزها و ماه‌ها' },
     ],
@@ -230,14 +235,37 @@ const roadmapData = [
       'اصطلاحات روزمره',
       'ضرب‌المثل‌های پشتو',
       'اصطلاحات خاص کندهاری',
+      'غذا و پخت و پز پیشرفته',
+      'اعضای بدن پیشرفته',
     ],
     lessons: [
       { id: 'retroflex', title: 'صداهای برگشته' },
       { id: 'idioms', title: 'اصطلاحات' },
       { id: 'proverbs', title: 'ضرب‌المثل‌ها' },
       { id: 'kandahari-slang', title: 'اصطلاحات کندهاری' },
+      { id: 'advanced-food-cooking', title: 'کولو (Cooking)' },
+      { id: 'advanced-body-parts', title: 'جسم کے حصے' },
     ],
-    tips: 'با پشتوزبانان صحبت کنید. فیلم و موسیقی پشتو گوش کنید.',
+    tips: 'با پشتوزبانان صحبت کنید. فیلم و موسیقی پشتو گوش کنید. درس‌های پیشرفته را برای تعمق بیشتر ببینید.',
+  },
+  {
+    phase: 11,
+    title: 'مرحله ۱۱: تنوع لهجه‌ای و تلفظ',
+    titlePashto: 'یولسم پړاو: لهجه‌ای تنوع',
+    duration: 'مداوم',
+    icon: Users,
+    color: 'indigo',
+    description: 'درک تنوع‌های لهجه‌ای و تلفظ‌های جایگزین در کندهاری',
+    goals: [
+      'درک تغییرات صوتی در لهجه‌های مختلف',
+      'تلفظ‌های جایگزین (ش/س، ژ/ز)',
+      'تنوع‌های منطقه‌ای کندهاری',
+      'انطباق با گویشوران مختلف',
+    ],
+    lessons: [
+      { id: 'kandahari-sounds', title: 'صداهای کندهاری' },
+    ],
+    tips: 'تنوع‌های لهجه‌ای طبیعی هستند. هر دو تلفظ (ش و س) در کندهاری قابل قبول است. با گویشوران مختلف تمرین کنید.',
   },
 ];
 
@@ -252,25 +280,27 @@ const colorClasses = {
   cyan: { bg: 'bg-cyan-500/20', border: 'border-cyan-500/50', text: 'text-cyan-400', icon: 'bg-cyan-500' },
   orange: { bg: 'bg-orange-500/20', border: 'border-orange-500/50', text: 'text-orange-400', icon: 'bg-orange-500' },
   purple: { bg: 'bg-purple-500/20', border: 'border-purple-500/50', text: 'text-purple-400', icon: 'bg-purple-500' },
+  indigo: { bg: 'bg-indigo-500/20', border: 'border-indigo-500/50', text: 'text-indigo-400', icon: 'bg-indigo-500' },
 };
 
 export default function RoadmapPage() {
   const [expandedPhase, setExpandedPhase] = useState(1);
-  const [completedPhases, setCompletedPhases] = useState([]);
+  const { progress, completePhase, uncompletePhase, isPhaseCompleted } = useProgress();
 
   const togglePhase = (phase) => {
     setExpandedPhase(expandedPhase === phase ? null : phase);
   };
 
   const toggleComplete = (phase) => {
-    if (completedPhases.includes(phase)) {
-      setCompletedPhases(completedPhases.filter(p => p !== phase));
+    if (isPhaseCompleted(phase)) {
+      uncompletePhase(phase);
     } else {
-      setCompletedPhases([...completedPhases, phase]);
+      completePhase(phase);
     }
   };
 
-  const progress = (completedPhases.length / roadmapData.length) * 100;
+  const completedCount = progress?.completedPhases?.length || 0;
+  const progressPercentage = (completedCount / roadmapData.length) * 100;
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -290,16 +320,16 @@ export default function RoadmapPage() {
         <div className="mt-4">
           <div className="flex justify-between text-sm mb-2">
             <span className="text-slate-400">پیشرفت کلی</span>
-            <span className="text-indigo-400 font-bold">{Math.round(progress)}%</span>
+            <span className="text-indigo-400 font-bold">{Math.round(progressPercentage)}%</span>
           </div>
           <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
-              style={{ width: `${progress}%` }}
+              style={{ width: `${progressPercentage}%` }}
             />
           </div>
           <p className="text-xs text-slate-500 mt-2">
-            {completedPhases.length} از {roadmapData.length} مرحله تکمیل شده
+            {completedCount} از {roadmapData.length} مرحله تکمیل شده
           </p>
         </div>
       </div>
@@ -308,12 +338,12 @@ export default function RoadmapPage() {
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
           <Target className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۱۰</p>
+          <p className="text-2xl font-bold text-slate-100">۱۲</p>
           <p className="text-xs text-slate-500">مرحله</p>
         </div>
         <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
           <Zap className="w-8 h-8 text-amber-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۵۳</p>
+          <p className="text-2xl font-bold text-slate-100">۵۶</p>
           <p className="text-xs text-slate-500">درس</p>
         </div>
         <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
@@ -328,7 +358,7 @@ export default function RoadmapPage() {
         {roadmapData.map((phase, idx) => {
           const colors = colorClasses[phase.color];
           const isExpanded = expandedPhase === phase.phase;
-          const isCompleted = completedPhases.includes(phase.phase);
+          const isCompleted = isPhaseCompleted(phase.phase);
           const Icon = phase.icon;
 
           return (

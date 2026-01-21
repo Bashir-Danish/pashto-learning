@@ -8,9 +8,22 @@ export function ProgressProvider({ children }) {
   const [progress, setProgress] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : {
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Ensure completedPhases exists for backward compatibility
+        return {
+          completedLessons: parsed.completedLessons || [],
+          completedPractices: parsed.completedPractices || [],
+          completedPhases: parsed.completedPhases || [],
+          currentStreak: parsed.currentStreak || 0,
+          totalXP: parsed.totalXP || 0,
+          lastStudyDate: parsed.lastStudyDate || null,
+        };
+      }
+      return {
         completedLessons: [],
         completedPractices: [],
+        completedPhases: [],
         currentStreak: 0,
         totalXP: 0,
         lastStudyDate: null,
@@ -19,6 +32,7 @@ export function ProgressProvider({ children }) {
       return {
         completedLessons: [],
         completedPractices: [],
+        completedPhases: [],
         currentStreak: 0,
         totalXP: 0,
         lastStudyDate: null,
@@ -66,12 +80,33 @@ export function ProgressProvider({ children }) {
     });
   };
 
+  const completePhase = (phaseNumber) => {
+    setProgress(prev => {
+      if (prev.completedPhases.includes(phaseNumber)) return prev;
+      return {
+        ...prev,
+        completedPhases: [...prev.completedPhases, phaseNumber],
+      };
+    });
+  };
+
+  const uncompletePhase = (phaseNumber) => {
+    setProgress(prev => ({
+      ...prev,
+      completedPhases: prev.completedPhases.filter(p => p !== phaseNumber),
+    }));
+  };
+
   const isLessonCompleted = (lessonId) => {
     return progress.completedLessons.includes(lessonId);
   };
 
   const isLessonComplete = (lessonId) => {
     return progress.completedLessons.includes(lessonId);
+  };
+
+  const isPhaseCompleted = (phaseNumber) => {
+    return progress.completedPhases.includes(phaseNumber);
   };
 
   const getProgressPercentage = (categoryLessons) => {
@@ -94,8 +129,11 @@ export function ProgressProvider({ children }) {
     progress,
     completeLesson,
     completePractice,
+    completePhase,
+    uncompletePhase,
     isLessonCompleted,
     isLessonComplete,
+    isPhaseCompleted,
     getProgressPercentage,
     getCategoryProgress,
   };
