@@ -87,6 +87,7 @@ const roadmapData = [
       'فعل‌های حرکتی (ځم، راځم)',
       'فعل‌های روزمره (خورم، څښم، کوم)',
       'فعل خواستن (غواړم)',
+      'فعل‌های کمکی (باید، کولی شی، توانیدل)',
       'فعل‌های اساسی در تمام زمان‌ها',
     ],
     lessons: [
@@ -97,9 +98,9 @@ const roadmapData = [
       { id: 'verb-to-drink', title: 'فعل نوشیدن' },
       { id: 'verb-to-do', title: 'فعل کردن' },
       { id: 'verb-to-want', title: 'فعل خواستن' },
-      { id: 'comprehensive-verbs', title: 'فعل‌های اساسی - تمام زمان‌ها' },
+      { id: 'modal-verbs', title: 'فعل‌های کمکی' },
     ],
-    tips: 'از صفحه صرف فعل استفاده کنید. هر فعل را با تمام ضمایر تمرین کنید. درس جامع فعل‌ها را برای یادگیری تمام زمان‌ها ببینید.',
+    tips: 'از صفحه صرف فعل استفاده کنید. هر فعل را با تمام ضمایر تمرین کنید. درس جامع فعل‌ها و فعل‌های کمکی را برای یادگیری تمام زمان‌ها ببینید.',
   },
   {
     phase: 5,
@@ -343,7 +344,7 @@ export default function RoadmapPage() {
         </div>
         <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
           <Zap className="w-8 h-8 text-amber-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۵۶</p>
+          <p className="text-2xl font-bold text-slate-100">۵۷</p>
           <p className="text-xs text-slate-500">درس</p>
         </div>
         <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">

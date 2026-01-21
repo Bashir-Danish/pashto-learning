@@ -65,7 +65,8 @@
         { "id": "verb-to-eat", "title": "فعل خوردن (خورم)", "titleFa": "فعل خوردن (خورم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "verb-to-drink", "title": "فعل نوشیدن (څښم)", "titleFa": "فعل نوشیدن (څښم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "verb-to-do", "title": "فعل کردن (کوم)", "titleFa": "فعل کردن (کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
-        { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" }
+        { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "modal-verbs", "title": "فعل‌های کمکی (Modal Verbs)", "titleFa": "فعل‌های کمکی", "difficulty": "medium", "duration": "۳۰ دقیقه" }
       ]
     },
     {
