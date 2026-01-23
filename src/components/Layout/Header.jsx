@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, BarChart3, Menu, Trophy, Flame, Users } from 'lucide-react';
+import { BookOpen, BarChart3, Menu, Trophy, Flame, Users, RefreshCw } from 'lucide-react';
 import { useProgress } from '../../contexts/ProgressContext';
 import { useUser } from '../../contexts/UserContext';
 import { useState } from 'react';
@@ -8,11 +8,32 @@ export default function Header({ onMenuClick }) {
   const { progress } = useProgress();
   const { currentUser, users, setCurrentUser, getCurrentUserData } = useUser();
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const currentUserData = getCurrentUserData();
 
   const handleUserChange = (userId) => {
     setCurrentUser(userId);
     setShowUserMenu(false);
+  };
+
+  const handleRefresh = () => {
+    setIsRefreshing(true);
+    // Check for service worker updates
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        registrations.forEach((reg) => {
+          reg.update().then(() => {
+            if (reg.waiting) {
+              reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+          });
+        });
+      });
+    }
+    // Reload page after a short delay
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   };
 
   return (
@@ -47,6 +68,16 @@ export default function Header({ onMenuClick }) {
 
           {/* Left side - Stats */}
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+            {/* Refresh Button */}
+            <button
+              onClick={handleRefresh}
+              disabled={isRefreshing}
+              className="p-2 hover:bg-slate-700 rounded-lg sm:rounded-xl border border-slate-600 hover:border-cyan-500/50 transition-all disabled:opacity-50"
+              title="تازه‌سازی"
+            >
+              <RefreshCw className={`w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 ${isRefreshing ? 'animate-spin' : ''}`} />
+            </button>
+
             {/* User Selector */}
             <div className="relative">
               <button
