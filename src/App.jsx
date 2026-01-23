@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useUser } from './contexts/UserContext';
 import Layout from './components/Layout/Layout';
 import UserSelectionPage from './pages/UserSelectionPage';
+import UserStatsPage from './pages/UserStatsPage';
 import DashboardPage from './pages/DashboardPage';
 import LessonPage from './pages/LessonPage';
 import PracticePage from './pages/PracticePage';
@@ -23,6 +24,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<DashboardPage />} />
+        <Route path="/users" element={<UserStatsPage />} />
         <Route path="/lesson/:lessonId" element={<LessonPage />} />
         <Route path="/practice/:practiceId" element={<PracticePage />} />
         <Route path="/alphabet" element={<AlphabetPage />} />

@@ -16,6 +16,7 @@ const iconMap = {
 // Quick access items
 const quickAccess = [
   { id: 'roadmap', path: '/roadmap', icon: Map, label: 'نقشه راه', labelPs: 'لارښود', color: '#6366f1' },
+  { id: 'users', path: '/users', icon: Users, label: 'کاربران', labelPs: 'کاربران', color: '#ec4899' },
   { id: 'alphabet', path: '/alphabet', icon: Languages, label: 'الفبا', labelPs: 'الفبا', color: '#10b981' },
   { id: 'conjugation', path: '/conjugation', icon: Table, label: 'گردان فعل', labelPs: 'فعلونه', color: '#f59e0b' },
   { id: 'conversations', path: '/conversation', icon: MessageCircle, label: 'مکالمات', labelPs: 'خبرې', color: '#8b5cf6' },
