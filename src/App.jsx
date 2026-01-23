@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
+import { useUser } from './contexts/UserContext';
 import Layout from './components/Layout/Layout';
+import UserSelectionPage from './pages/UserSelectionPage';
 import DashboardPage from './pages/DashboardPage';
 import LessonPage from './pages/LessonPage';
 import PracticePage from './pages/PracticePage';
@@ -10,6 +12,13 @@ import ConjugationPage from './pages/ConjugationPage';
 import RoadmapPage from './pages/RoadmapPage';
 
 function App() {
+  const { currentUser } = useUser();
+
+  // Show user selection if no user is selected
+  if (!currentUser) {
+    return <UserSelectionPage />;
+  }
+
   return (
     <Layout>
       <Routes>

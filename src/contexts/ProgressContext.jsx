@@ -1,100 +1,89 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { useUser } from './UserContext';
 
 const ProgressContext = createContext(null);
 
-const STORAGE_KEY = 'pashto-learning-progress';
+const STORAGE_KEY = 'pashto-learning-progress-multi';
+
+const getDefaultProgress = () => ({
+  completedLessons: [],
+  completedPractices: [],
+  completedPhases: [],
+  currentStreak: 0,
+  totalXP: 0,
+  lastStudyDate: null,
+});
 
 export function ProgressProvider({ children }) {
-  const [progress, setProgress] = useState(() => {
+  const { currentUser } = useUser();
+  
+  const [allProgress, setAllProgress] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        // Ensure completedPhases exists for backward compatibility
-        return {
-          completedLessons: parsed.completedLessons || [],
-          completedPractices: parsed.completedPractices || [],
-          completedPhases: parsed.completedPhases || [],
-          currentStreak: parsed.currentStreak || 0,
-          totalXP: parsed.totalXP || 0,
-          lastStudyDate: parsed.lastStudyDate || null,
-        };
-      }
-      return {
-        completedLessons: [],
-        completedPractices: [],
-        completedPhases: [],
-        currentStreak: 0,
-        totalXP: 0,
-        lastStudyDate: null,
-      };
+      return saved ? JSON.parse(saved) : {};
     } catch {
-      return {
-        completedLessons: [],
-        completedPractices: [],
-        completedPhases: [],
-        currentStreak: 0,
-        totalXP: 0,
-        lastStudyDate: null,
-      };
+      return {};
     }
   });
 
+  const progress = allProgress[currentUser] || getDefaultProgress();
+
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  }, [progress]);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
+  }, [allProgress]);
+
+  const updateProgress = (updates) => {
+    setAllProgress(prev => ({
+      ...prev,
+      [currentUser]: {
+        ...getDefaultProgress(),
+        ...prev[currentUser],
+        ...updates,
+      },
+    }));
+  };
 
   const completeLesson = (lessonId, xp = 10) => {
-    setProgress(prev => {
-      if (prev.completedLessons.includes(lessonId)) return prev;
-      
-      const today = new Date().toDateString();
-      const lastDate = prev.lastStudyDate;
-      const yesterday = new Date(Date.now() - 86400000).toDateString();
-      
-      let newStreak = prev.currentStreak;
-      if (lastDate === yesterday) {
-        newStreak += 1;
-      } else if (lastDate !== today) {
-        newStreak = 1;
-      }
+    if (progress.completedLessons.includes(lessonId)) return;
+    
+    const today = new Date().toDateString();
+    const lastDate = progress.lastStudyDate;
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    
+    let newStreak = progress.currentStreak;
+    if (lastDate === yesterday) {
+      newStreak += 1;
+    } else if (lastDate !== today) {
+      newStreak = 1;
+    }
 
-      return {
-        ...prev,
-        completedLessons: [...prev.completedLessons, lessonId],
-        totalXP: prev.totalXP + xp,
-        currentStreak: newStreak,
-        lastStudyDate: today,
-      };
+    updateProgress({
+      completedLessons: [...progress.completedLessons, lessonId],
+      totalXP: progress.totalXP + xp,
+      currentStreak: newStreak,
+      lastStudyDate: today,
     });
   };
 
   const completePractice = (practiceId, xp = 5) => {
-    setProgress(prev => {
-      if (prev.completedPractices.includes(practiceId)) return prev;
-      return {
-        ...prev,
-        completedPractices: [...prev.completedPractices, practiceId],
-        totalXP: prev.totalXP + xp,
-      };
+    if (progress.completedPractices.includes(practiceId)) return;
+    updateProgress({
+      completedPractices: [...progress.completedPractices, practiceId],
+      totalXP: progress.totalXP + xp,
     });
   };
 
   const completePhase = (phaseNumber) => {
-    setProgress(prev => {
-      if (prev.completedPhases.includes(phaseNumber)) return prev;
-      return {
-        ...prev,
-        completedPhases: [...prev.completedPhases, phaseNumber],
-      };
+    if (progress.completedPhases.includes(phaseNumber)) return;
+    updateProgress({
+      completedPhases: [...progress.completedPhases, phaseNumber],
     });
   };
 
   const uncompletePhase = (phaseNumber) => {
-    setProgress(prev => ({
-      ...prev,
-      completedPhases: prev.completedPhases.filter(p => p !== phaseNumber),
-    }));
+    updateProgress({
+      completedPhases: progress.completedPhases.filter(p => p !== phaseNumber),
+    });
   };
 
   const isLessonCompleted = (lessonId) => {
