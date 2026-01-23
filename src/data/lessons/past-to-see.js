@@ -110,8 +110,7 @@ export const pastToSeeLesson = {
 > **نکته:** فعل «لیدل» در حال به «وینم» تبدیل می‌شود که ریشه متفاوتی دارد.
 `,
 
-  hasPractice: true,
-  practiceId: 'past-to-see',
+  hasPractice: false,
 };
 
 export default pastToSeeLesson;

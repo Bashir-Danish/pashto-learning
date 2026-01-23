@@ -101,8 +101,7 @@ export const pastToGoLesson = {
 > **نکته:** فعل «لاړ» برای مذکر و «لاړه» برای مونث استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'past-to-go',
+  hasPractice: false,
 };
 
 export default pastToGoLesson;

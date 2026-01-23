@@ -77,8 +77,7 @@ export const retroflexLesson = {
 > **نکته مهم:** تلفظ صحیح این حروف نیاز به تمرین زیاد دارد. از گویندگان بومی بخواهید تلفظ را برایتان تکرار کنند.
 `,
 
-  hasPractice: true,
-  practiceId: 'retroflex',
+  hasPractice: false,
 };
 
 export default retroflexLesson;

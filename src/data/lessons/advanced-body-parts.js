@@ -141,8 +141,7 @@ export const advancedBodyPartsLesson = {
 > **نکته:** در فرهنگ افغانی، ورزش و فعالیت‌های جسمی بسیار مهم هستند. یادگیری این واژگان به شما کمک می‌کند تا بهتر با مردم افغان درباره سلامت و ورزش صحبت کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'advanced-body-parts',
+  hasPractice: false,
 };
 
 export default advancedBodyPartsLesson;

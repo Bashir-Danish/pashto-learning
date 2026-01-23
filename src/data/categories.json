@@ -50,14 +50,32 @@
       ]
     },
     {
+      "id": "grammar-intermediate",
+      "name": "۴. دستور زبان میانی",
+      "namePashto": "۴. منځنی ګرامر",
+      "nameFa": "دستور زبان میانی",
+      "icon": "BookOpen",
+      "color": "#ef4444",
+      "description": "قواعد دستوری پیشرفته‌تر",
+      "order": 4,
+      "lessons": [
+        { "id": "gender", "title": "جنسیت اسم‌ها", "titleFa": "جنسیت اسم‌ها", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "plural", "title": "جمع بستن", "titleFa": "جمع بستن", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "adjectives", "title": "صفت‌ها", "titleFa": "صفت‌ها", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "prepositions", "title": "حروف اضافه", "titleFa": "حروف اضافه", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "questions", "title": "جملات سوالی", "titleFa": "جملات سوالی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "negation", "title": "جملات منفی", "titleFa": "جملات منفی", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
       "id": "verbs-present",
-      "name": "۴. فعل حال",
-      "namePashto": "۴. اوسمهال فعلونه",
+      "name": "۵. فعل حال",
+      "namePashto": "۵. اوسمهال فعلونه",
       "nameFa": "فعل حال",
       "icon": "Play",
       "color": "#f59e0b",
       "description": "گردان فعل‌ها در زمان حال",
-      "order": 4,
+      "order": 5,
       "lessons": [
         { "id": "verb-to-be", "title": "فعل بودن (یم/دی)", "titleFa": "فعل بودن (یم/دی)", "difficulty": "easy", "duration": "۲۰ دقیقه" },
         { "id": "verb-to-go", "title": "فعل رفتن (ځم)", "titleFa": "فعل رفتن (ځم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
@@ -71,27 +89,14 @@
       ]
     },
     {
-      "id": "verbs-comprehensive",
-      "name": "۴.۵ فعل‌های جامع",
-      "namePashto": "۴.۵ د فعلونو مجموعه",
-      "nameFa": "فعل‌های جامع",
-      "icon": "Play",
-      "color": "#f59e0b",
-      "description": "فعل‌های اساسی در تمام زمان‌ها",
-      "order": 4.5,
-      "lessons": [
-        { "id": "comprehensive-verbs", "title": "فعل‌های اساسی - تمام زمان‌ها", "titleFa": "فعل‌های اساسی - تمام زمان‌ها", "difficulty": "hard", "duration": "۴۵ دقیقه" }
-      ]
-    },
-    {
       "id": "vocabulary-basic",
-      "name": "۵. واژگان پایه",
-      "namePashto": "۵. بنسټیز لغات",
+      "name": "۶. واژگان پایه",
+      "namePashto": "۶. بنسټیز لغات",
       "nameFa": "واژگان پایه",
       "icon": "Library",
       "color": "#14b8a6",
       "description": "کلمات ضروری روزمره",
-      "order": 5,
+      "order": 6,
       "lessons": [
         { "id": "family", "title": "خانواده", "titleFa": "خانواده", "difficulty": "easy", "duration": "۱۵ دقیقه" },
         { "id": "numbers-11-100", "title": "اعداد ۱۱ تا ۱۰۰", "titleFa": "اعداد ۱۱ تا ۱۰۰", "difficulty": "medium", "duration": "۲۰ دقیقه" },
@@ -103,13 +108,13 @@
     },
     {
       "id": "verbs-past",
-      "name": "۶. فعل گذشته",
-      "namePashto": "۶. تېرمهال فعلونه",
+      "name": "۷. فعل گذشته",
+      "namePashto": "۷. تېرمهال فعلونه",
       "nameFa": "فعل گذشته",
       "icon": "Clock",
       "color": "#8b5cf6",
       "description": "گردان فعل‌ها در زمان گذشته",
-      "order": 6,
+      "order": 7,
       "lessons": [
         { "id": "past-simple", "title": "گذشته ساده", "titleFa": "گذشته ساده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "past-to-go", "title": "رفتم (لاړم)", "titleFa": "رفتم (لاړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
@@ -120,32 +125,27 @@
       ]
     },
     {
-      "id": "grammar-intermediate",
-      "name": "۷. دستور زبان میانی",
-      "namePashto": "۷. منځنی ګرامر",
-      "nameFa": "دستور زبان میانی",
-      "icon": "BookOpen",
-      "color": "#ef4444",
-      "description": "قواعد دستوری پیشرفته‌تر",
-      "order": 7,
+      "id": "verbs-comprehensive",
+      "name": "۸. فعل‌های جامع",
+      "namePashto": "۸. د فعلونو مجموعه",
+      "nameFa": "فعل‌های جامع",
+      "icon": "Play",
+      "color": "#f59e0b",
+      "description": "فعل‌های اساسی در تمام زمان‌ها",
+      "order": 8,
       "lessons": [
-        { "id": "gender", "title": "جنسیت اسم‌ها", "titleFa": "جنسیت اسم‌ها", "difficulty": "medium", "duration": "۲۵ دقیقه" },
-        { "id": "plural", "title": "جمع بستن", "titleFa": "جمع بستن", "difficulty": "medium", "duration": "۲۰ دقیقه" },
-        { "id": "adjectives", "title": "صفت‌ها", "titleFa": "صفت‌ها", "difficulty": "medium", "duration": "۲۰ دقیقه" },
-        { "id": "prepositions", "title": "حروف اضافه", "titleFa": "حروف اضافه", "difficulty": "medium", "duration": "۲۵ دقیقه" },
-        { "id": "questions", "title": "جملات سوالی", "titleFa": "جملات سوالی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
-        { "id": "negation", "title": "جملات منفی", "titleFa": "جملات منفی", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+        { "id": "comprehensive-verbs", "title": "فعل‌های اساسی - تمام زمان‌ها", "titleFa": "فعل‌های اساسی - تمام زمان‌ها", "difficulty": "hard", "duration": "۴۵ دقیقه" }
       ]
     },
     {
       "id": "verbs-future",
-      "name": "۸. فعل آینده و امری",
-      "namePashto": "۸. راتلونکي او امري فعلونه",
+      "name": "۹. فعل آینده و امری",
+      "namePashto": "۹. راتلونکي او امري فعلونه",
       "nameFa": "فعل آینده و امری",
       "icon": "ArrowRight",
       "color": "#06b6d4",
       "description": "زمان آینده و دستوری",
-      "order": 8,
+      "order": 9,
       "lessons": [
         { "id": "future-tense", "title": "زمان آینده", "titleFa": "زمان آینده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "imperative", "title": "فعل امری", "titleFa": "فعل امری", "difficulty": "medium", "duration": "۲۵ دقیقه" },
@@ -155,13 +155,13 @@
     },
     {
       "id": "conversations",
-      "name": "۹. مکالمات روزمره",
-      "namePashto": "۹. ورځنۍ خبرې",
+      "name": "۱۰. مکالمات روزمره",
+      "namePashto": "۱۰. ورځنۍ خبرې",
       "nameFa": "مکالمات روزمره",
       "icon": "MessageSquare",
       "color": "#f97316",
       "description": "مکالمات عملی در موقعیت‌های مختلف",
-      "order": 9,
+      "order": 10,
       "lessons": [
         { "id": "conv-shopping", "title": "در بازار", "titleFa": "در بازار", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "conv-restaurant", "title": "در رستوران", "titleFa": "در رستوران", "difficulty": "medium", "duration": "۲۵ دقیقه" },
@@ -173,13 +173,13 @@
     },
     {
       "id": "advanced",
-      "name": "۱۰. پیشرفته",
-      "namePashto": "۱۰. پرمختللی",
+      "name": "۱۱. پیشرفته",
+      "namePashto": "۱۱. پرمختللی",
       "nameFa": "پیشرفته",
       "icon": "Star",
       "color": "#a855f7",
       "description": "موضوعات پیشرفته و اصطلاحات",
-      "order": 10,
+      "order": 11,
       "lessons": [
         { "id": "retroflex", "title": "صداهای برگشته", "titleFa": "صداهای برگشته", "difficulty": "hard", "duration": "۲۵ دقیقه" },
         { "id": "idioms", "title": "اصطلاحات", "titleFa": "اصطلاحات", "difficulty": "hard", "duration": "۳۰ دقیقه" },

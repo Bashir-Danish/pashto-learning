@@ -75,8 +75,7 @@ export const numbers11to100Lesson = {
 > **نکته:** در کندهاری، تلفظ اعداد کمی نرم‌تر از لهجه کابلی است.
 `,
 
-  hasPractice: true,
-  practiceId: 'numbers-11-100',
+  hasPractice: false,
 };
 
 export default numbers11to100Lesson;

@@ -94,8 +94,7 @@ export const verbToBeLesson = {
 > **نکته:** در پښتو فعل بودن با جنسیت فاعل تغییر می‌کند: «دی» برای مذکر و «ده» برای مونث.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-be',
+  hasPractice: false,
 };
 
 export default verbToBeLesson;

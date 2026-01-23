@@ -99,8 +99,7 @@ export const convGuestLesson = {
 > **نکته فرهنگی:** در فرهنگ پښتون، رد کردن پذیرایی بی‌ادبی محسوب می‌شود. حداقل کمی بخورید یا بنوشید.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-guest',
+  hasPractice: false,
 };
 
 export default convGuestLesson;

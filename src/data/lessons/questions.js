@@ -113,8 +113,7 @@ export const questionsLesson = {
 > **نکته:** در پښتو، کلمه پرسشی معمولاً در جای خود در جمله می‌ماند.
 `,
 
-  hasPractice: true,
-  practiceId: 'questions',
+  hasPractice: false,
 };
 
 export default questionsLesson;

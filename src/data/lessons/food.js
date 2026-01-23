@@ -105,8 +105,7 @@ export const foodLesson = {
 > **نکته:** در فرهنگ پښتون، مهمان‌نوازی بسیار مهم است و همیشه به مهمان غذا تعارف می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'food',
+  hasPractice: false,
 };
 
 export default foodLesson;

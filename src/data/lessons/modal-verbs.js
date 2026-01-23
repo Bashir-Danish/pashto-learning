@@ -280,8 +280,7 @@ export const modalVerbsLesson = {
 > **یادونه:** د حسم کی حصی فعلونه د مصدر فعل سره کارول کیږي!
 `,
 
-  hasPractice: true,
-  practiceId: 'modal-verbs',
+  hasPractice: false,
 };
 
 export default modalVerbsLesson;

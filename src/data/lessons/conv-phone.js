@@ -99,8 +99,7 @@ export const convPhoneLesson = {
 > **نکته:** در پښتو، «الو» برای شروع مکالمه تلفنی استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-phone',
+  hasPractice: false,
 };
 
 export default convPhoneLesson;

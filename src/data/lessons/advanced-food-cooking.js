@@ -141,8 +141,7 @@ export const advancedFoodCookingLesson = {
 > **نکته:** در فرهنگ افغانی، پخت و پز و غذا خوردن با خانواده بسیار مهم است. یادگیری این واژگان به شما کمک می‌کند تا بهتر با مردم افغان ارتباط برقرار کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'advanced-food-cooking',
+  hasPractice: false,
 };
 
 export default advancedFoodCookingLesson;

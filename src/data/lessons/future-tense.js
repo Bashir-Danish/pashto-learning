@@ -115,8 +115,7 @@ export const futureTenseLesson = {
 > **نکته:** «به» همیشه قبل از فعل می‌آید و نشان‌دهنده آینده است.
 `,
 
-  hasPractice: true,
-  practiceId: 'future-tense',
+  hasPractice: false,
 };
 
 export default futureTenseLesson;

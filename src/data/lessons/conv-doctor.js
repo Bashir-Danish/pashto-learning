@@ -110,8 +110,7 @@ export const convDoctorLesson = {
 > **نکته:** در افغانستان، به داکتر «داکتر صاحب» می‌گویند که نشانه احترام است.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-doctor',
+  hasPractice: false,
 };
 
 export default convDoctorLesson;

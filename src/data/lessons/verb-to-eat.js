@@ -105,8 +105,7 @@ export const verbToEatLesson = {
 > **نکته:** در پښتو «ډوډۍ» هم به معنی نان است و هم به معنی غذا به طور کلی.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-eat',
+  hasPractice: false,
 };
 
 export default verbToEatLesson;

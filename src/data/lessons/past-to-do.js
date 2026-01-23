@@ -99,8 +99,7 @@ export const pastToDoLesson = {
 > **نکته:** «کول» یکی از مهم‌ترین فعل‌ها برای ساختن فعل‌های مرکب است.
 `,
 
-  hasPractice: true,
-  practiceId: 'past-to-do',
+  hasPractice: false,
 };
 
 export default pastToDoLesson;

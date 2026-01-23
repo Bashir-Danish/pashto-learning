@@ -92,8 +92,7 @@ export const formalInformalLesson = {
 > **نکته مهم:** در پښتو، استفاده از شکل رسمی نشان‌دهنده احترام است. همیشه با بزرگترها و غریبه‌ها از شکل رسمی استفاده کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'formal-informal',
+  hasPractice: false,
 };
 
 export default formalInformalLesson;

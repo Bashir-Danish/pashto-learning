@@ -102,8 +102,7 @@ export const pastSimpleLesson = {
 > **نکته مهم:** در پښتو، فعل‌های متعدی در گذشته با مفعول مطابقت می‌کنند، نه با فاعل. این یکی از ویژگی‌های خاص پښتو است.
 `,
 
-  hasPractice: true,
-  practiceId: 'past-simple',
+  hasPractice: false,
 };
 
 export default pastSimpleLesson;

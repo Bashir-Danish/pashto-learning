@@ -102,8 +102,7 @@ export const verbToComeLesson = {
 > **نکته:** پیشوند «را» نشان‌دهنده حرکت به سمت گوینده است. «درځم» یعنی به سمت تو می‌آیم.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-come',
+  hasPractice: false,
 };
 
 export default verbToComeLesson;

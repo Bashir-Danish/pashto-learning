@@ -100,8 +100,7 @@ export const convRestaurantLesson = {
 > **نکته:** در رستوران‌های افغانستان، معمولاً چای رایگان است و بعد از غذا سرو می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-restaurant',
+  hasPractice: false,
 };
 
 export default convRestaurantLesson;

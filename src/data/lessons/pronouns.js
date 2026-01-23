@@ -102,8 +102,7 @@ export const pronounsLesson = {
 > **نکته:** در موقعیت‌های رسمی یا با بزرگترها، از «تاسو» به جای «ته» استفاده کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'pronouns',
+  hasPractice: false,
 };
 
 export default pronounsLesson;

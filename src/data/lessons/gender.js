@@ -94,8 +94,7 @@ export const genderLesson = {
 > **نکته:** یادگیری جنسیت اسم‌ها نیاز به تمرین دارد. بهتر است هر کلمه را با جنسیتش حفظ کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'gender',
+  hasPractice: false,
 };
 
 export default genderLesson;

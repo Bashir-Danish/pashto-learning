@@ -80,8 +80,7 @@ export const proverbsLesson = {
 > **نکته:** ضرب‌المثل‌ها در فرهنگ پښتون بسیار ارزشمند هستند و استفاده از آنها نشان‌دهنده دانش و فرهنگ است.
 `,
 
-  hasPractice: true,
-  practiceId: 'proverbs',
+  hasPractice: false,
 };
 
 export default proverbsLesson;

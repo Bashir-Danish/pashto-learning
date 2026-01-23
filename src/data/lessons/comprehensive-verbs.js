@@ -385,8 +385,7 @@ export const comprehensiveVerbsLesson = {
 > **نکته:** تمرین منظم این فعل‌ها بسیار مهم است. هر روز این جداول را تکرار کنید تا به خاطر بسپارید.
 `,
 
-  hasPractice: true,
-  practiceId: 'comprehensive-verbs',
+  hasPractice: false,
 };
 
 export default comprehensiveVerbsLesson;

@@ -92,8 +92,7 @@ export const idiomsLesson = {
 > **نکته:** اصطلاحات در مکالمه روزمره بسیار استفاده می‌شوند و یادگیری آنها مهم است.
 `,
 
-  hasPractice: true,
-  practiceId: 'idioms',
+  hasPractice: false,
 };
 
 export default idiomsLesson;

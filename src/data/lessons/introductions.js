@@ -106,8 +106,7 @@ export const introductionsLesson = {
 > **نکته:** در معرفی رسمی از «تاسو» و در غیررسمی از «ته» استفاده کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'introductions',
+  hasPractice: false,
 };
 
 export default introductionsLesson;

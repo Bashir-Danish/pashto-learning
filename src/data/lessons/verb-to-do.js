@@ -101,8 +101,7 @@ export const verbToDoLesson = {
 > **نکته:** فعل «کول» برای ساختن بسیاری از فعل‌های مرکب استفاده می‌شود. مثلاً: کار کول، خبرې کول، مرسته کول.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-do',
+  hasPractice: false,
 };
 
 export default verbToDoLesson;

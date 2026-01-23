@@ -121,8 +121,7 @@ export const requestsLesson = {
 > **نکته:** در پښتو، استفاده از «که مهربانی وکړئ» درخواست را بسیار مودبانه می‌کند.
 `,
 
-  hasPractice: true,
-  practiceId: 'requests',
+  hasPractice: false,
 };
 
 export default requestsLesson;

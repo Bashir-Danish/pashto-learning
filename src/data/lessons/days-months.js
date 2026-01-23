@@ -111,8 +111,7 @@ export const daysMonthsLesson = {
 > **نکته:** در افغانستان از تقویم شمسی استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'days-months',
+  hasPractice: false,
 };
 
 export default daysMonthsLesson;

@@ -106,8 +106,7 @@ export const imperativeFormalLesson = {
 > **نکته:** در پښتو، استفاده از شکل رسمی نشان‌دهنده احترام است و در موقعیت‌های رسمی ضروری است.
 `,
 
-  hasPractice: true,
-  practiceId: 'imperative-formal',
+  hasPractice: false,
 };
 
 export default imperativeFormalLesson;

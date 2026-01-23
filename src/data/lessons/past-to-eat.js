@@ -95,8 +95,7 @@ export const pastToEatLesson = {
 > **نکته:** پیشوند «و» نشانه گذشته است. «خورم» (می‌خورم) → «وخوړم» (خوردم)
 `,
 
-  hasPractice: true,
-  practiceId: 'past-to-eat',
+  hasPractice: false,
 };
 
 export default pastToEatLesson;

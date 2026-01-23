@@ -91,8 +91,7 @@ export const colorsLesson = {
 > **نکته:** رنگ‌ها در پښتو صفت هستند و با جنسیت اسم تغییر می‌کنند.
 `,
 
-  hasPractice: true,
-  practiceId: 'colors',
+  hasPractice: false,
 };
 
 export default colorsLesson;

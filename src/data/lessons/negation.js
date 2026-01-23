@@ -119,8 +119,7 @@ export const negationLesson = {
 > **نکته:** «نه» برای فعل‌های خبری و «مه» برای فعل‌های امری استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'negation',
+  hasPractice: false,
 };
 
 export default negationLesson;

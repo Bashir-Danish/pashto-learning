@@ -139,8 +139,7 @@ export const familyLesson = {
 > **یادونه:** پښتانه عموماً په پراخو کورنیو کې ژوند کوي او د مشرانو درناوی ډیر مهم دی.
 `,
 
-  hasPractice: true,
-  practiceId: 'family',
+  hasPractice: false,
 };
 
 export default familyLesson;

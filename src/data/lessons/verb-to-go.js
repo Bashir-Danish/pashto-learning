@@ -99,8 +99,7 @@ export const verbToGoLesson = {
 > **نکته کندهاری:** در لهجه کندهاری، «ځ» به صورت واضح‌تر تلفظ می‌شود (مثل dz در انگلیسی).
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-go',
+  hasPractice: false,
 };
 
 export default verbToGoLesson;

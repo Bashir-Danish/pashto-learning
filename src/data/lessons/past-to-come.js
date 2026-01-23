@@ -102,8 +102,7 @@ export const pastToComeLesson = {
 > **نکته:** «راغی» برای مذکر و «راغله» برای مونث استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'past-to-come',
+  hasPractice: false,
 };
 
 export default pastToComeLesson;

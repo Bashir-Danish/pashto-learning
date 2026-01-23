@@ -96,8 +96,7 @@ export const kandahariSlangLesson = {
 > **نکته:** لهجه کندهاری یکی از اصیل‌ترین لهجه‌های پښتو محسوب می‌شود و حروف خاص پښتو در آن واضح‌تر تلفظ می‌شوند.
 `,
 
-  hasPractice: true,
-  practiceId: 'kandahari-slang',
+  hasPractice: false,
 };
 
 export default kandahariSlangLesson;

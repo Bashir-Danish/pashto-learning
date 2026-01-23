@@ -105,8 +105,7 @@ export const adjectivesLesson = {
 > **نکته:** صفت‌ها در پښتو با جنسیت اسم تغییر می‌کنند.
 `,
 
-  hasPractice: true,
-  practiceId: 'adjectives',
+  hasPractice: false,
 };
 
 export default adjectivesLesson;

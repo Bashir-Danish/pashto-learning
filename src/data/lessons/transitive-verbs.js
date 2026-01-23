@@ -224,8 +224,7 @@ export const transitiveVerbsLesson = {
 > **یادونه:** د انتقالی فعلونه دوه شیان لري - فاعل او مفعول!
 `,
 
-  hasPractice: true,
-  practiceId: 'transitive-verbs',
+  hasPractice: false,
 };
 
 export default transitiveVerbsLesson;

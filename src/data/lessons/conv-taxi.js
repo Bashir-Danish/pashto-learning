@@ -100,8 +100,7 @@ export const convTaxiLesson = {
 > **نکته:** در افغانستان، معمولاً قبل از سوار شدن قیمت را توافق کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-taxi',
+  hasPractice: false,
 };
 
 export default convTaxiLesson;

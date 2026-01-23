@@ -104,8 +104,7 @@ export const verbToDrinkLesson = {
 > **نکته کندهاری:** در کندهاری «څ» به صورت واضح تلفظ می‌شود. «څښل» یعنی نوشیدن.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-drink',
+  hasPractice: false,
 };
 
 export default verbToDrinkLesson;

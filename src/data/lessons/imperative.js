@@ -116,8 +116,7 @@ export const imperativeLesson = {
 > **نکته:** در پښتو، امری رسمی با «ئ» و غیررسمی با «ه» پایان می‌یابد.
 `,
 
-  hasPractice: true,
-  practiceId: 'imperative',
+  hasPractice: false,
 };
 
 export default imperativeLesson;

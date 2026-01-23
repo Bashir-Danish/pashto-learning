@@ -97,8 +97,7 @@ export const possessivePronounsLesson = {
 > **نکته:** «زما» و «ستا» مستقیماً قبل از اسم می‌آیند، اما برای سوم شخص از «د» استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'possessive-pronouns',
+  hasPractice: false,
 };
 
 export default possessivePronounsLesson;

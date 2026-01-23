@@ -109,8 +109,7 @@ export const verbToWantLesson = {
 > **نکته:** «غواړم» هم برای خواستن چیزی و هم برای بیان قصد (می‌خواهم که...) استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'verb-to-want',
+  hasPractice: false,
 };
 
 export default verbToWantLesson;

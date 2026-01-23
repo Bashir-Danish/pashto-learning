@@ -103,8 +103,7 @@ export const prepositionsLesson = {
 > **نکته:** در پښتو، حروف اضافه معمولاً قبل از اسم می‌آیند.
 `,
 
-  hasPractice: true,
-  practiceId: 'prepositions',
+  hasPractice: false,
 };
 
 export default prepositionsLesson;

@@ -101,8 +101,7 @@ export const pluralLesson = {
 > **نکته:** در پښتو، جمع بستن با جنسیت اسم ارتباط مستقیم دارد.
 `,
 
-  hasPractice: true,
-  practiceId: 'plural',
+  hasPractice: false,
 };
 
 export default pluralLesson;

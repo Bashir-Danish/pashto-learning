@@ -93,8 +93,7 @@ export const convShoppingLesson = {
 > **نکته:** در بازارهای افغانستان، چانه زدن معمول است. از «لږ ارزان کړئ» استفاده کنید.
 `,
 
-  hasPractice: true,
-  practiceId: 'conv-shopping',
+  hasPractice: false,
 };
 
 export default convShoppingLesson;

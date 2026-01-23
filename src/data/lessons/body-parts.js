@@ -105,8 +105,7 @@ export const bodyPartsLesson = {
 > **نکته:** در پښتو، برای بیان درد از فعل «خوږیږي» (درد می‌کند) استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'body-parts',
+  hasPractice: false,
 };
 
 export default bodyPartsLesson;

@@ -94,8 +94,7 @@ export const sentenceStructureLesson = {
 > **نکته:** در پښتو، فعل همیشه در آخر جمله می‌آید. این مهم‌ترین قاعده است!
 `,
 
-  hasPractice: true,
-  practiceId: 'sentence-structure',
+  hasPractice: false,
 };
 
 export default sentenceStructureLesson;

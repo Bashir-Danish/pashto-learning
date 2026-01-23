@@ -79,8 +79,7 @@ export const howAreYouLesson = {
 > **نکته:** پښتون‌ها معمولاً چند بار حال همدیگر را می‌پرسند. این نشانه احترام و علاقه است.
 `,
 
-  hasPractice: true,
-  practiceId: 'how-are-you',
+  hasPractice: false,
 };
 
 export default howAreYouLesson;

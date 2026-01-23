@@ -97,8 +97,7 @@ export const demonstrativesLesson = {
 > **نکته:** «دا» برای نزدیک و «هغه» برای دور استفاده می‌شود.
 `,
 
-  hasPractice: true,
-  practiceId: 'demonstratives',
+  hasPractice: false,
 };
 
 export default demonstrativesLesson;
