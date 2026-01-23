@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useUser } from './UserContext';
+import usersData from '../data/users.json';
 
 const ProgressContext = createContext(null);
 
@@ -19,8 +20,18 @@ export function ProgressProvider({ children }) {
   
   const [allProgress, setAllProgress] = useState(() => {
     try {
+      // Try to load from localStorage first
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : {};
+      if (saved) {
+        return JSON.parse(saved);
+      }
+      
+      // Initialize from users.json
+      const initialProgress = {};
+      usersData.users.forEach(user => {
+        initialProgress[user.id] = user.progress || getDefaultProgress();
+      });
+      return initialProgress;
     } catch {
       return {};
     }
@@ -28,6 +39,7 @@ export function ProgressProvider({ children }) {
 
   const progress = allProgress[currentUser] || getDefaultProgress();
 
+  // Save progress to localStorage
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
   }, [allProgress]);
