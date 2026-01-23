@@ -7,7 +7,7 @@ import categoriesData from '../data/categories.json';
 export default function LessonPage() {
   const { lessonId } = useParams();
   const navigate = useNavigate();
-  const { completeLesson, isLessonCompleted } = useProgress();
+  const { completeLesson, uncompleteLesson, isLessonCompleted } = useProgress();
   
   const lesson = getLessonById(lessonId);
   const isCompleted = isLessonCompleted(lessonId);
@@ -33,6 +33,10 @@ export default function LessonPage() {
 
   const handleComplete = () => {
     completeLesson(lessonId, 10);
+  };
+
+  const handleUncomplete = () => {
+    uncompleteLesson(lessonId);
   };
 
   const handleNext = () => {
@@ -114,6 +118,16 @@ export default function LessonPage() {
           >
             <CheckCircle2 className="w-5 h-5" />
             تکمیل درس (+10 XP)
+          </button>
+        )}
+        
+        {isCompleted && (
+          <button
+            onClick={handleUncomplete}
+            className="flex-1 py-3 bg-slate-600 hover:bg-slate-500 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2"
+          >
+            <CheckCircle2 className="w-5 h-5" />
+            لغو تکمیل
           </button>
         )}
         

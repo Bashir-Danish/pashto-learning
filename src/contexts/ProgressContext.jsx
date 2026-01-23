@@ -6,6 +6,121 @@ const ProgressContext = createContext(null);
 
 const STORAGE_KEY = 'pashto-learning-progress-multi';
 
+// Roadmap data with phase-to-lesson mapping
+const getRoadmapData = () => [
+  {
+    phase: 1,
+    lessons: [
+      { id: 'alphabet-intro' },
+      { id: 'unique-letters' },
+      { id: 'kandahari-sounds' },
+      { id: 'vowels' },
+    ],
+  },
+  {
+    phase: 2,
+    lessons: [
+      { id: 'basic-greetings' },
+      { id: 'how-are-you' },
+      { id: 'introductions' },
+      { id: 'formal-informal' },
+    ],
+  },
+  {
+    phase: 3,
+    lessons: [
+      { id: 'pronouns' },
+      { id: 'possessive-pronouns' },
+      { id: 'demonstratives' },
+      { id: 'sentence-structure' },
+    ],
+  },
+  {
+    phase: 4,
+    lessons: [
+      { id: 'gender' },
+      { id: 'plural' },
+      { id: 'adjectives' },
+      { id: 'prepositions' },
+      { id: 'questions' },
+      { id: 'negation' },
+    ],
+  },
+  {
+    phase: 5,
+    lessons: [
+      { id: 'verb-to-be' },
+      { id: 'verb-to-go' },
+      { id: 'verb-to-come' },
+      { id: 'verb-to-eat' },
+      { id: 'verb-to-drink' },
+      { id: 'verb-to-do' },
+      { id: 'verb-to-want' },
+      { id: 'modal-verbs' },
+      { id: 'transitive-verbs' },
+    ],
+  },
+  {
+    phase: 6,
+    lessons: [
+      { id: 'family' },
+      { id: 'numbers-11-100' },
+      { id: 'food' },
+      { id: 'body-parts' },
+      { id: 'colors' },
+      { id: 'days-months' },
+    ],
+  },
+  {
+    phase: 7,
+    lessons: [
+      { id: 'past-simple' },
+      { id: 'past-to-go' },
+      { id: 'past-to-come' },
+      { id: 'past-to-eat' },
+      { id: 'past-to-do' },
+      { id: 'past-to-see' },
+    ],
+  },
+  {
+    phase: 8,
+    lessons: [
+      { id: 'comprehensive-verbs' },
+    ],
+  },
+  {
+    phase: 9,
+    lessons: [
+      { id: 'future-tense' },
+      { id: 'imperative' },
+      { id: 'imperative-formal' },
+      { id: 'requests' },
+    ],
+  },
+  {
+    phase: 10,
+    lessons: [
+      { id: 'conv-shopping' },
+      { id: 'conv-restaurant' },
+      { id: 'conv-taxi' },
+      { id: 'conv-phone' },
+      { id: 'conv-doctor' },
+      { id: 'conv-guest' },
+    ],
+  },
+  {
+    phase: 11,
+    lessons: [
+      { id: 'retroflex' },
+      { id: 'idioms' },
+      { id: 'proverbs' },
+      { id: 'kandahari-slang' },
+      { id: 'advanced-food-cooking' },
+      { id: 'advanced-body-parts' },
+    ],
+  },
+];
+
 const getDefaultProgress = () => ({
   completedLessons: [],
   completedPractices: [],
@@ -69,11 +184,50 @@ export function ProgressProvider({ children }) {
       newStreak = 1;
     }
 
+    const newCompletedLessons = [...progress.completedLessons, lessonId];
+    
+    // Check if any phase is now complete
+    const newCompletedPhases = [...progress.completedPhases];
+    const roadmapData = getRoadmapData();
+    
+    roadmapData.forEach(phase => {
+      if (!newCompletedPhases.includes(phase.phase)) {
+        const allLessonsComplete = phase.lessons.every(lesson =>
+          newCompletedLessons.includes(lesson.id)
+        );
+        if (allLessonsComplete) {
+          newCompletedPhases.push(phase.phase);
+        }
+      }
+    });
+
     updateProgress({
-      completedLessons: [...progress.completedLessons, lessonId],
+      completedLessons: newCompletedLessons,
+      completedPhases: newCompletedPhases,
       totalXP: progress.totalXP + xp,
       currentStreak: newStreak,
       lastStudyDate: today,
+    });
+  };
+
+  const uncompleteLesson = (lessonId) => {
+    const newCompletedLessons = progress.completedLessons.filter(id => id !== lessonId);
+    
+    // Check if any phase should be uncompleted
+    const newCompletedPhases = progress.completedPhases.filter(phaseNum => {
+      const roadmapData = getRoadmapData();
+      const phase = roadmapData.find(p => p.phase === phaseNum);
+      if (!phase) return true;
+      
+      // Keep phase only if all its lessons are still completed
+      return phase.lessons.every(lesson =>
+        newCompletedLessons.includes(lesson.id)
+      );
+    });
+
+    updateProgress({
+      completedLessons: newCompletedLessons,
+      completedPhases: newCompletedPhases,
     });
   };
 
@@ -87,8 +241,23 @@ export function ProgressProvider({ children }) {
 
   const completePhase = (phaseNumber) => {
     if (progress.completedPhases.includes(phaseNumber)) return;
+    
+    const roadmapData = getRoadmapData();
+    const phase = roadmapData.find(p => p.phase === phaseNumber);
+    
+    if (!phase) return;
+    
+    // Auto-complete all lessons in this phase
+    const newCompletedLessons = [...progress.completedLessons];
+    phase.lessons.forEach(lesson => {
+      if (!newCompletedLessons.includes(lesson.id)) {
+        newCompletedLessons.push(lesson.id);
+      }
+    });
+    
     updateProgress({
       completedPhases: [...progress.completedPhases, phaseNumber],
+      completedLessons: newCompletedLessons,
     });
   };
 
@@ -129,6 +298,7 @@ export function ProgressProvider({ children }) {
   const value = {
     progress,
     completeLesson,
+    uncompleteLesson,
     completePractice,
     completePhase,
     uncompletePhase,
