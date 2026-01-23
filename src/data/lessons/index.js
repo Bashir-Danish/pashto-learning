@@ -27,6 +27,7 @@ import { verbToDrinkLesson } from './verb-to-drink';
 import { verbToDoLesson } from './verb-to-do';
 import { verbToWantLesson } from './verb-to-want';
 import { modalVerbsLesson } from './modal-verbs';
+import { transitiveVerbsLesson } from './transitive-verbs';
 
 // ۴.۵ فعل‌های جامع (Comprehensive Verbs - All Tenses)
 import { comprehensiveVerbsLesson } from './comprehensive-verbs';
@@ -109,6 +110,7 @@ export const lessons = [
   verbToDoLesson,
   verbToWantLesson,
   modalVerbsLesson,
+  transitiveVerbsLesson,
   comprehensiveVerbsLesson,
   
   // ۵. واژگان پایه
