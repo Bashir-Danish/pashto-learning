@@ -101,6 +101,7 @@
         { "id": "verb-to-eat", "title": "فعل خوردن (خورم)", "titleFa": "فعل خوردن (خورم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "verb-to-drink", "title": "فعل نوشیدن (څښم)", "titleFa": "فعل نوشیدن (څښم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "verb-to-do", "title": "فعل کردن (کوم)", "titleFa": "فعل کردن (کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-pour", "title": "فعل ریختن (ریختم)", "titleFa": "فعل ریختن (ریختم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "modal-verbs", "title": "فعل‌های کمکی (Modal Verbs)", "titleFa": "فعل‌های کمکی", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "transitive-verbs", "title": "فعل‌های انتقالی", "titleFa": "فعل‌های انتقالی", "difficulty": "medium", "duration": "۲۵ دقیقه" }
@@ -123,6 +124,7 @@
         { "id": "past-to-eat", "title": "خوردم (وخوړم)", "titleFa": "خوردم (وخوړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "past-to-drink", "title": "نوشیدم (وڅښم)", "titleFa": "نوشیدم (وڅښم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "past-to-do", "title": "کردم (وکړم)", "titleFa": "کردم (وکړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-pour", "title": "ریختم (وریخت)", "titleFa": "ریختم (وریخت)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "past-to-see", "title": "دیدم (ولیدم)", "titleFa": "دیدم (ولیدم)", "difficulty": "medium", "duration": "۲۵ دقیقه" }
       ]
     },
@@ -143,6 +145,7 @@
         { "id": "future-to-eat", "title": "خواهم خورد (به خورم)", "titleFa": "خواهم خورد (به خورم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "future-to-drink", "title": "خواهم نوشید (به څښم)", "titleFa": "خواهم نوشید (به څښم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "future-to-do", "title": "خواهم کرد (به کوم)", "titleFa": "خواهم کرد (به کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-pour", "title": "خواهم ریخت (به ریختم)", "titleFa": "خواهم ریخت (به ریختم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "imperative", "title": "فعل امری", "titleFa": "فعل امری", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "imperative-formal", "title": "امری رسمی", "titleFa": "امری رسمی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
         { "id": "requests", "title": "درخواست کردن", "titleFa": "درخواست کردن", "difficulty": "medium", "duration": "۲۰ دقیقه" }

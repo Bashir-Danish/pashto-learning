@@ -25,6 +25,7 @@ import { verbToComeLesson } from './verb-to-come';
 import { verbToEatLesson } from './verb-to-eat';
 import { verbToDrinkLesson } from './verb-to-drink';
 import { verbToDoLesson } from './verb-to-do';
+import { verbToPourLesson } from './verb-to-pour';
 import { verbToWantLesson } from './verb-to-want';
 import { modalVerbsLesson } from './modal-verbs';
 import { transitiveVerbsLesson } from './transitive-verbs';
@@ -48,6 +49,7 @@ import { pastToComeLesson } from './past-to-come';
 import { pastToEatLesson } from './past-to-eat';
 import { pastToDrinkLesson } from './past-to-drink';
 import { pastToDoLesson } from './past-to-do';
+import { pastToPourLesson } from './past-to-pour';
 import { pastToSeeLesson } from './past-to-see';
 
 // ۷. دستور زبان میانی (Intermediate Grammar)
@@ -66,6 +68,7 @@ import { futureToComeLessson } from './future-to-come';
 import { futureToEatLesson } from './future-to-eat';
 import { futureToDrinkLesson } from './future-to-drink';
 import { futureToDoLesson } from './future-to-do';
+import { futureToPourLesson } from './future-to-pour';
 import { imperativeLesson } from './imperative';
 import { imperativeFormalLesson } from './imperative-formal';
 import { requestsLesson } from './requests';
@@ -116,6 +119,7 @@ export const lessons = [
   verbToEatLesson,
   verbToDrinkLesson,
   verbToDoLesson,
+  verbToPourLesson,
   verbToWantLesson,
   modalVerbsLesson,
   transitiveVerbsLesson,
@@ -137,6 +141,7 @@ export const lessons = [
   pastToEatLesson,
   pastToDrinkLesson,
   pastToDoLesson,
+  pastToPourLesson,
   pastToSeeLesson,
   
   // ۷. دستور زبان میانی
@@ -155,6 +160,7 @@ export const lessons = [
   futureToEatLesson,
   futureToDrinkLesson,
   futureToDoLesson,
+  futureToPourLesson,
   imperativeLesson,
   imperativeFormalLesson,
   requestsLesson,
