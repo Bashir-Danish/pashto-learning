@@ -117,9 +117,11 @@
       "order": 7,
       "lessons": [
         { "id": "past-simple", "title": "گذشته ساده", "titleFa": "گذشته ساده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
+        { "id": "past-to-be", "title": "بودم (وم)", "titleFa": "بودم (وم)", "difficulty": "easy", "duration": "۲۰ دقیقه", "hasPractice": false },
         { "id": "past-to-go", "title": "رفتم (لاړم)", "titleFa": "رفتم (لاړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "past-to-come", "title": "آمدم (راغلم)", "titleFa": "آمدم (راغلم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "past-to-eat", "title": "خوردم (وخوړم)", "titleFa": "خوردم (وخوړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "past-to-drink", "title": "نوشیدم (وڅښم)", "titleFa": "نوشیدم (وڅښم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "past-to-do", "title": "کردم (وکړم)", "titleFa": "کردم (وکړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "past-to-see", "title": "دیدم (ولیدم)", "titleFa": "دیدم (ولیدم)", "difficulty": "medium", "duration": "۲۵ دقیقه" }
       ]
@@ -135,6 +137,12 @@
       "order": 8,
       "lessons": [
         { "id": "future-tense", "title": "زمان آینده", "titleFa": "زمان آینده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
+        { "id": "future-to-be", "title": "خواهم بود (به یم)", "titleFa": "خواهم بود (به یم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-go", "title": "خواهم رفت (به ځم)", "titleFa": "خواهم رفت (به ځم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-come", "title": "خواهم آمد (به راځم)", "titleFa": "خواهم آمد (به راځم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-eat", "title": "خواهم خورد (به خورم)", "titleFa": "خواهم خورد (به خورم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-drink", "title": "خواهم نوشید (به څښم)", "titleFa": "خواهم نوشید (به څښم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
+        { "id": "future-to-do", "title": "خواهم کرد (به کوم)", "titleFa": "خواهم کرد (به کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "imperative", "title": "فعل امری", "titleFa": "فعل امری", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "imperative-formal", "title": "امری رسمی", "titleFa": "امری رسمی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
         { "id": "requests", "title": "درخواست کردن", "titleFa": "درخواست کردن", "difficulty": "medium", "duration": "۲۰ دقیقه" }

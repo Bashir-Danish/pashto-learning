@@ -75,9 +75,11 @@ const getRoadmapData = () => [
     phase: 7,
     lessons: [
       { id: 'past-simple' },
+      { id: 'past-to-be' },
       { id: 'past-to-go' },
       { id: 'past-to-come' },
       { id: 'past-to-eat' },
+      { id: 'past-to-drink' },
       { id: 'past-to-do' },
       { id: 'past-to-see' },
     ],
@@ -85,16 +87,22 @@ const getRoadmapData = () => [
   {
     phase: 8,
     lessons: [
-      { id: 'comprehensive-verbs' },
+      { id: 'future-tense' },
+      { id: 'future-to-be' },
+      { id: 'future-to-go' },
+      { id: 'future-to-come' },
+      { id: 'future-to-eat' },
+      { id: 'future-to-drink' },
+      { id: 'future-to-do' },
+      { id: 'imperative' },
+      { id: 'imperative-formal' },
+      { id: 'requests' },
     ],
   },
   {
     phase: 9,
     lessons: [
-      { id: 'future-tense' },
-      { id: 'imperative' },
-      { id: 'imperative-formal' },
-      { id: 'requests' },
+      { id: 'comprehensive-verbs' },
     ],
   },
   {

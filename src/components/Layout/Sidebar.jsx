@@ -72,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
         {/* Quick Access */}
         <div className="p-2 sm:p-3 border-b border-slate-700 flex-shrink-0">
-          <p className="text-[10px] sm:text-xs font-semibold text-slate-500 mb-2 px-1">دسترسی سریع</p>
+          {/* <p className="text-[10px] sm:text-xs font-semibold text-slate-500 mb-2 px-1">دسترسی سریع</p> */}
           <div className="grid grid-cols-4 gap-1 sm:gap-2">
             {quickAccess.map(item => {
               const Icon = item.icon;

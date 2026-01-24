@@ -42,9 +42,11 @@ import { daysMonthsLesson } from './days-months';
 
 // ۶. فعل گذشته (Past Tense Verbs)
 import { pastSimpleLesson } from './past-simple';
+import { pastToBeLesson } from './past-to-be';
 import { pastToGoLesson } from './past-to-go';
 import { pastToComeLesson } from './past-to-come';
 import { pastToEatLesson } from './past-to-eat';
+import { pastToDrinkLesson } from './past-to-drink';
 import { pastToDoLesson } from './past-to-do';
 import { pastToSeeLesson } from './past-to-see';
 
@@ -58,6 +60,12 @@ import { negationLesson } from './negation';
 
 // ۸. فعل آینده و امری (Future & Imperative)
 import { futureTenseLesson } from './future-tense';
+import { futureToBeLesson } from './future-to-be';
+import { futureToGoLesson } from './future-to-go';
+import { futureToComeLessson } from './future-to-come';
+import { futureToEatLesson } from './future-to-eat';
+import { futureToDrinkLesson } from './future-to-drink';
+import { futureToDoLesson } from './future-to-do';
 import { imperativeLesson } from './imperative';
 import { imperativeFormalLesson } from './imperative-formal';
 import { requestsLesson } from './requests';
@@ -123,9 +131,11 @@ export const lessons = [
   
   // ۶. فعل گذشته
   pastSimpleLesson,
+  pastToBeLesson,
   pastToGoLesson,
   pastToComeLesson,
   pastToEatLesson,
+  pastToDrinkLesson,
   pastToDoLesson,
   pastToSeeLesson,
   
@@ -139,6 +149,12 @@ export const lessons = [
   
   // ۸. فعل آینده و امری
   futureTenseLesson,
+  futureToBeLesson,
+  futureToGoLesson,
+  futureToComeLessson,
+  futureToEatLesson,
+  futureToDrinkLesson,
+  futureToDoLesson,
   imperativeLesson,
   imperativeFormalLesson,
   requestsLesson,
