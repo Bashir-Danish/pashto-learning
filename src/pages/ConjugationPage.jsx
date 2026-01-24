@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import { BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { verbConjugations, verbList } from '../data/conjugations';
 
 function ConjugationPage() {
   const [selectedVerb, setSelectedVerb] = useState('to-go');
-  const [expandedTenses, setExpandedTenses] = useState(['present', 'past', 'future', 'imperative']);
 
   const verb = verbConjugations[selectedVerb];
 
-  const toggleTense = (tense) => {
-    setExpandedTenses(prev => 
-      prev.includes(tense) 
-        ? prev.filter(t => t !== tense)
-        : [...prev, tense]
-    );
+  // Get tense order with numbers
+  const tenseOrder = ['present', 'past', 'future', 'imperative'];
+  const tenseNumbers = {
+    present: '۱',
+    past: '۲',
+    future: '۳',
+    imperative: '۴',
   };
 
   const tenseColors = {
@@ -42,9 +42,9 @@ function ConjugationPage() {
             onChange={(e) => setSelectedVerb(e.target.value)}
             className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-slate-200 text-lg focus:border-emerald-500 focus:outline-none transition-colors"
           >
-            {verbList.map(v => (
+            {verbList.map((v, index) => (
               <option key={v.id} value={v.id}>
-                {v.namePashto} - {v.name} ({v.root})
+                {index + 1}. {v.namePashto} - {v.name} ({v.root})
               </option>
             ))}
           </select>
@@ -77,26 +77,24 @@ function ConjugationPage() {
         )}
 
         {/* Conjugation Tables */}
-        {verb && Object.entries(verb.tenses).map(([tenseKey, tense]) => (
-          <div key={tenseKey} className="bg-slate-800 rounded-xl mb-4 shadow-lg border border-slate-700 overflow-hidden">
-            {/* Tense Header */}
-            <button
-              onClick={() => toggleTense(tenseKey)}
-              className={`w-full p-4 flex items-center justify-between bg-gradient-to-r ${tenseColors[tenseKey] || 'from-slate-600 to-slate-700'} text-white`}
-            >
-              <div className="flex items-center gap-3">
-                <span className="text-xl font-bold">{tense.namePashto}</span>
-                <span className="text-lg opacity-80">({tense.name})</span>
+        {verb && tenseOrder.map((tenseKey, index) => {
+          const tense = verb.tenses[tenseKey];
+          if (!tense) return null;
+          
+          return (
+            <div key={tenseKey} className="bg-slate-800 rounded-xl mb-6 shadow-lg border border-slate-700 overflow-hidden">
+              {/* Tense Header with Number */}
+              <div className={`p-4 flex items-center gap-3 bg-gradient-to-r ${tenseColors[tenseKey] || 'from-slate-600 to-slate-700'} text-white`}>
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-bold text-lg">
+                  {tenseNumbers[tenseKey]}
+                </div>
+                <div>
+                  <span className="text-xl font-bold">{tense.namePashto}</span>
+                  <span className="text-lg opacity-80 mr-2">({tense.name})</span>
+                </div>
               </div>
-              {expandedTenses.includes(tenseKey) ? (
-                <ChevronUp className="w-6 h-6" />
-              ) : (
-                <ChevronDown className="w-6 h-6" />
-              )}
-            </button>
 
-            {/* Conjugation Table */}
-            {expandedTenses.includes(tenseKey) && (
+              {/* Conjugation Table */}
               <div className="p-4">
                 {tense.note && (
                   <div className="bg-amber-500/20 text-amber-300 p-3 rounded-lg mb-4 text-sm border border-amber-500/30">
@@ -148,9 +146,9 @@ function ConjugationPage() {
                   </div>
                 )}
               </div>
-            )}
-          </div>
-        ))}
+            </div>
+          );
+        })}
 
         {/* Examples */}
         {verb && verb.examples && (

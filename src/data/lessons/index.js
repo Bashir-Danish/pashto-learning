@@ -27,6 +27,14 @@ import { verbToDrinkLesson } from './verb-to-drink';
 import { verbToDoLesson } from './verb-to-do';
 import { verbToPourLesson } from './verb-to-pour';
 import { verbToWantLesson } from './verb-to-want';
+import { verbToHitLesson } from './verb-to-hit';
+import { verbToWashLesson } from './verb-to-wash';
+import { verbToGiveLesson } from './verb-to-give';
+import { verbToTakeLesson } from './verb-to-take';
+import { verbToStandLesson } from './verb-to-stand';
+import { verbToRunLesson } from './verb-to-run';
+import { verbToCloseLesson } from './verb-to-close';
+import { verbToOpenLesson } from './verb-to-open';
 import { modalVerbsLesson } from './modal-verbs';
 import { transitiveVerbsLesson } from './transitive-verbs';
 
@@ -121,6 +129,14 @@ export const lessons = [
   verbToDoLesson,
   verbToPourLesson,
   verbToWantLesson,
+  verbToHitLesson,
+  verbToWashLesson,
+  verbToGiveLesson,
+  verbToTakeLesson,
+  verbToStandLesson,
+  verbToRunLesson,
+  verbToCloseLesson,
+  verbToOpenLesson,
   modalVerbsLesson,
   transitiveVerbsLesson,
   comprehensiveVerbsLesson,

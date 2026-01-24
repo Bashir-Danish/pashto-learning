@@ -36,6 +36,30 @@ export const verbConjugations = {
           { pronoun: 'هغوی', pashto: 'ول', farsi: 'بودند', pronunciation: 'wal' },
         ],
       },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به یم', farsi: 'خواهم بود', pronunciation: 'ba yam' },
+          { pronoun: 'ته', pashto: 'به یې', farsi: 'خواهی بود', pronunciation: 'ba ye' },
+          { pronoun: 'هغه', pashto: 'به دی', farsi: 'خواهد بود', pronunciation: 'ba day' },
+          { pronoun: 'موږ', pashto: 'به یو', farsi: 'خواهیم بود', pronunciation: 'ba yu' },
+          { pronoun: 'تاسو', pashto: 'به یاست', farsi: 'خواهید بود', pronunciation: 'ba yāst' },
+          { pronoun: 'هغوی', pashto: 'به دي', farsi: 'خواهند بود', pronunciation: 'ba di' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'یه', farsi: 'باش', pronunciation: 'ya' },
+          { pronoun: 'تاسو', pashto: 'یاست', farsi: 'باشید', pronunciation: 'yāst' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه یه', farsi: 'نباش', pronunciation: 'ma ya' },
+          { pronoun: 'تاسو', pashto: 'مه یاست', farsi: 'نباشید', pronunciation: 'ma yāst' },
+        ],
+      },
     },
     examples: [
       { pashto: 'زه ښه یم', farsi: 'من خوبم' },
@@ -417,6 +441,18 @@ export const verbConjugations = {
           { pronoun: 'موږ', pashto: 'به غواړو', farsi: 'خواهیم خواست', pronunciation: 'ba ghwāṛu' },
           { pronoun: 'تاسو', pashto: 'به غواړئ', farsi: 'خواهید خواست', pronunciation: 'ba ghwāṛey' },
           { pronoun: 'هغوی', pashto: 'به غواړي', farsi: 'خواهند خواست', pronunciation: 'ba ghwāṛi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'غواړه', farsi: 'بخواه', pronunciation: 'ghwāṛa' },
+          { pronoun: 'تاسو', pashto: 'غواړئ', farsi: 'بخواهید', pronunciation: 'ghwāṛey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه غواړه', farsi: 'نخواه', pronunciation: 'ma ghwāṛa' },
+          { pronoun: 'تاسو', pashto: 'مه غواړئ', farsi: 'نخواهید', pronunciation: 'ma ghwāṛey' },
         ],
       },
     },
@@ -1076,6 +1112,18 @@ export const verbConjugations = {
           { pronoun: 'هغوی', pashto: 'به پوهېږي', farsi: 'خواهند فهمید', pronunciation: 'ba poheẓ̌i' },
         ],
       },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'پوه شه', farsi: 'بفهم', pronunciation: 'poh sha' },
+          { pronoun: 'تاسو', pashto: 'پوه شئ', farsi: 'بفهمید', pronunciation: 'poh shey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه پوهېږه', farsi: 'نفهم', pronunciation: 'ma poheẓ̌a' },
+          { pronoun: 'تاسو', pashto: 'مه پوهېږئ', farsi: 'نفهمید', pronunciation: 'ma poheẓ̌ey' },
+        ],
+      },
     },
     examples: [
       { pashto: 'زه پوهېږم', farsi: 'من می‌فهمم' },
@@ -1375,6 +1423,30 @@ export const verbConjugations = {
           { pronoun: 'هغوی', pashto: 'خوښېده', farsi: 'دوست داشتند', pronunciation: 'khwax̌eda' },
         ],
       },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به خوښم', farsi: 'خواهم دوست داشت', pronunciation: 'ba khwaxam' },
+          { pronoun: 'ته', pashto: 'به خوښې', farsi: 'خواهی دوست داشت', pronunciation: 'ba khwaxe' },
+          { pronoun: 'هغه', pashto: 'به خوښي', farsi: 'خواهد دوست داشت', pronunciation: 'ba khwaxi' },
+          { pronoun: 'موږ', pashto: 'به خوښو', farsi: 'خواهیم دوست داشت', pronunciation: 'ba khwaxu' },
+          { pronoun: 'تاسو', pashto: 'به خوښئ', farsi: 'خواهید دوست داشت', pronunciation: 'ba khwaxey' },
+          { pronoun: 'هغوی', pashto: 'به خوښي', farsi: 'خواهند دوست داشت', pronunciation: 'ba khwaxi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'خوښه', farsi: 'دوست بدار', pronunciation: 'khwaxа' },
+          { pronoun: 'تاسو', pashto: 'خوښئ', farsi: 'دوست بدارید', pronunciation: 'khwaxey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه خوښه', farsi: 'دوست مدار', pronunciation: 'ma khwaxа' },
+          { pronoun: 'تاسو', pashto: 'مه خوښئ', farsi: 'دوست مدارید', pronunciation: 'ma khwaxey' },
+        ],
+      },
     },
     examples: [
       { pashto: 'ما ته خوښېږې', farsi: 'من تو را دوست دارم' },
@@ -1427,6 +1499,18 @@ export const verbConjugations = {
           { pronoun: 'موږ', pashto: 'به کار کوو', farsi: 'کار خواهیم کرد', pronunciation: 'ba kār kawu' },
           { pronoun: 'تاسو', pashto: 'به کار کوئ', farsi: 'کار خواهید کرد', pronunciation: 'ba kār kawey' },
           { pronoun: 'هغوی', pashto: 'به کار کوي', farsi: 'کار خواهند کرد', pronunciation: 'ba kār kawi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'کار وکړه', farsi: 'کار بکن', pronunciation: 'kār wakṛa' },
+          { pronoun: 'تاسو', pashto: 'کار وکړئ', farsi: 'کار بکنید', pronunciation: 'kār wakṛey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه کار کوه', farsi: 'کار مکن', pronunciation: 'ma kār kawa' },
+          { pronoun: 'تاسو', pashto: 'مه کار کوئ', farsi: 'کار مکنید', pronunciation: 'ma kār kawey' },
         ],
       },
     },
@@ -1483,6 +1567,18 @@ export const verbConjugations = {
           { pronoun: 'هغوی', pashto: 'به خبرې کوي', farsi: 'صحبت خواهند کرد', pronunciation: 'ba khabre kawi' },
         ],
       },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'خبرې وکړه', farsi: 'صحبت بکن', pronunciation: 'khabre wakṛa' },
+          { pronoun: 'تاسو', pashto: 'خبرې وکړئ', farsi: 'صحبت بکنید', pronunciation: 'khabre wakṛey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه خبرې کوه', farsi: 'صحبت مکن', pronunciation: 'ma khabre kawa' },
+          { pronoun: 'تاسو', pashto: 'مه خبرې کوئ', farsi: 'صحبت مکنید', pronunciation: 'ma khabre kawey' },
+        ],
+      },
     },
     examples: [
       { pashto: 'زه پښتو خبرې کوم', farsi: 'من پشتو صحبت می‌کنم' },
@@ -1535,6 +1631,18 @@ export const verbConjugations = {
           { pronoun: 'موږ', pashto: 'به ژوند کوو', farsi: 'زندگی خواهیم کرد', pronunciation: 'ba zhwand kawu' },
           { pronoun: 'تاسو', pashto: 'به ژوند کوئ', farsi: 'زندگی خواهید کرد', pronunciation: 'ba zhwand kawey' },
           { pronoun: 'هغوی', pashto: 'به ژوند کوي', farsi: 'زندگی خواهند کرد', pronunciation: 'ba zhwand kawi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'ژوند وکړه', farsi: 'زندگی بکن', pronunciation: 'zhwand wakṛa' },
+          { pronoun: 'تاسو', pashto: 'ژوند وکړئ', farsi: 'زندگی بکنید', pronunciation: 'zhwand wakṛey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه ژوند کوه', farsi: 'زندگی مکن', pronunciation: 'ma zhwand kawa' },
+          { pronoun: 'تاسو', pashto: 'مه ژوند کوئ', farsi: 'زندگی مکنید', pronunciation: 'ma zhwand kawey' },
         ],
       },
     },
@@ -1591,6 +1699,18 @@ export const verbConjugations = {
           { pronoun: 'هغوی', pashto: 'به زده کوي', farsi: 'یاد خواهند گرفت', pronunciation: 'ba zda kawi' },
         ],
       },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'زده وکړه', farsi: 'یاد بگیر', pronunciation: 'zda wakṛa' },
+          { pronoun: 'تاسو', pashto: 'زده وکړئ', farsi: 'یاد بگیرید', pronunciation: 'zda wakṛey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه زده کوه', farsi: 'یاد مگیر', pronunciation: 'ma zda kawa' },
+          { pronoun: 'تاسو', pashto: 'مه زده کوئ', farsi: 'یاد مگیرید', pronunciation: 'ma zda kawey' },
+        ],
+      },
     },
     examples: [
       { pashto: 'زه پښتو زده کوم', farsi: 'من پشتو یاد می‌گیرم' },
@@ -1598,9 +1718,487 @@ export const verbConjugations = {
       { pashto: 'ته څه زده کوې؟', farsi: 'تو چه یاد می‌گیری؟' },
     ],
   },
+
+  // فعل وهل - To Hit
+  'to-hit': {
+    id: 'to-hit',
+    infinitive: 'وهل',
+    infinitiveFarsi: 'زدن',
+    root: 'وه',
+    pastRoot: 'وو',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'وهم', farsi: 'می‌زنم', pronunciation: 'waham' },
+          { pronoun: 'ته', pashto: 'وهې', farsi: 'می‌زنی', pronunciation: 'wahe' },
+          { pronoun: 'هغه', pashto: 'وهي', farsi: 'می‌زند', pronunciation: 'wahi' },
+          { pronoun: 'موږ', pashto: 'وهو', farsi: 'می‌زنیم', pronunciation: 'wahu' },
+          { pronoun: 'تاسو', pashto: 'وهئ', farsi: 'می‌زنید', pronunciation: 'wahey' },
+          { pronoun: 'هغوی', pashto: 'وهي', farsi: 'می‌زنند', pronunciation: 'wahi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'ووهم', farsi: 'زدم', pronunciation: 'wawaham' },
+          { pronoun: 'تا', pashto: 'ووهې', farsi: 'زدی', pronunciation: 'wawahe' },
+          { pronoun: 'هغه', pashto: 'ووه', farsi: 'زد', pronunciation: 'wawa' },
+          { pronoun: 'موږ', pashto: 'ووهل', farsi: 'زدیم', pronunciation: 'wawal' },
+          { pronoun: 'تاسو', pashto: 'ووهل', farsi: 'زدید', pronunciation: 'wawal' },
+          { pronoun: 'هغوی', pashto: 'ووهل', farsi: 'زدند', pronunciation: 'wawal' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به وهم', farsi: 'خواهم زد', pronunciation: 'ba waham' },
+          { pronoun: 'ته', pashto: 'به وهې', farsi: 'خواهی زد', pronunciation: 'ba wahe' },
+          { pronoun: 'هغه', pashto: 'به وهي', farsi: 'خواهد زد', pronunciation: 'ba wahi' },
+          { pronoun: 'موږ', pashto: 'به وهو', farsi: 'خواهیم زد', pronunciation: 'ba wahu' },
+          { pronoun: 'تاسو', pashto: 'به وهئ', farsi: 'خواهید زد', pronunciation: 'ba wahey' },
+          { pronoun: 'هغوی', pashto: 'به وهي', farsi: 'خواهند زد', pronunciation: 'ba wahi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'وه', farsi: 'بزن', pronunciation: 'wa' },
+          { pronoun: 'تاسو', pashto: 'وهئ', farsi: 'بزنید', pronunciation: 'wahey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه وه', farsi: 'نزن', pronunciation: 'ma wa' },
+          { pronoun: 'تاسو', pashto: 'مه وهئ', farsi: 'نزنید', pronunciation: 'ma wahey' },
+        ],
+      },
+    },
+  },
+
+  // فعل مینځل - To Wash
+  'to-wash': {
+    id: 'to-wash',
+    infinitive: 'مینځل',
+    infinitiveFarsi: 'شستن',
+    root: 'مینځ',
+    pastRoot: 'ومینځ',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'مینځم', farsi: 'می‌شوم', pronunciation: 'mindzam' },
+          { pronoun: 'ته', pashto: 'مینځې', farsi: 'می‌شوی', pronunciation: 'mindze' },
+          { pronoun: 'هغه', pashto: 'مینځي', farsi: 'می‌شود', pronunciation: 'mindzi' },
+          { pronoun: 'موږ', pashto: 'مینځو', farsi: 'می‌شویم', pronunciation: 'mindzu' },
+          { pronoun: 'تاسو', pashto: 'مینځئ', farsi: 'می‌شوید', pronunciation: 'mindzey' },
+          { pronoun: 'هغوی', pashto: 'مینځي', farsi: 'می‌شوند', pronunciation: 'mindzi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'ومینځم', farsi: 'شستم', pronunciation: 'wamindzam' },
+          { pronoun: 'تا', pashto: 'ومینځې', farsi: 'شستی', pronunciation: 'wamindze' },
+          { pronoun: 'هغه', pashto: 'ومینځ', farsi: 'شست', pronunciation: 'wamindz' },
+          { pronoun: 'موږ', pashto: 'ومینځل', farsi: 'شستیم', pronunciation: 'wamindzal' },
+          { pronoun: 'تاسو', pashto: 'ومینځل', farsi: 'شستید', pronunciation: 'wamindzal' },
+          { pronoun: 'هغوی', pashto: 'ومینځل', farsi: 'شستند', pronunciation: 'wamindzal' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به مینځم', farsi: 'خواهم شست', pronunciation: 'ba mindzam' },
+          { pronoun: 'ته', pashto: 'به مینځې', farsi: 'خواهی شست', pronunciation: 'ba mindze' },
+          { pronoun: 'هغه', pashto: 'به مینځي', farsi: 'خواهد شست', pronunciation: 'ba mindzi' },
+          { pronoun: 'موږ', pashto: 'به مینځو', farsi: 'خواهیم شست', pronunciation: 'ba mindzu' },
+          { pronoun: 'تاسو', pashto: 'به مینځئ', farsi: 'خواهید شست', pronunciation: 'ba mindzey' },
+          { pronoun: 'هغوی', pashto: 'به مینځي', farsi: 'خواهند شست', pronunciation: 'ba mindzi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'ومینځه', farsi: 'بشو', pronunciation: 'wamindza' },
+          { pronoun: 'تاسو', pashto: 'ومینځئ', farsi: 'بشوید', pronunciation: 'wamindzey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه مینځه', farsi: 'نشو', pronunciation: 'ma mindza' },
+          { pronoun: 'تاسو', pashto: 'مه مینځئ', farsi: 'نشوید', pronunciation: 'ma mindzey' },
+        ],
+      },
+    },
+  },
+
+  // فعل ورکول - To Give
+  'to-give': {
+    id: 'to-give',
+    infinitive: 'ورکول',
+    infinitiveFarsi: 'دادن',
+    root: 'ورکو',
+    pastRoot: 'ورکړ',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'ورکوم', farsi: 'می‌دهم', pronunciation: 'warkawam' },
+          { pronoun: 'ته', pashto: 'ورکوې', farsi: 'می‌دهی', pronunciation: 'warkawe' },
+          { pronoun: 'هغه', pashto: 'ورکوي', farsi: 'می‌دهد', pronunciation: 'warkawi' },
+          { pronoun: 'موږ', pashto: 'ورکوو', farsi: 'می‌دهیم', pronunciation: 'warkawu' },
+          { pronoun: 'تاسو', pashto: 'ورکوئ', farsi: 'می‌دهید', pronunciation: 'warkawy' },
+          { pronoun: 'هغوی', pashto: 'ورکوي', farsi: 'می‌دهند', pronunciation: 'warkawi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'ورکړ', farsi: 'دادم', pronunciation: 'warkṛ' },
+          { pronoun: 'تا', pashto: 'ورکړې', farsi: 'دادی', pronunciation: 'warkṛe' },
+          { pronoun: 'هغه', pashto: 'ورکړ', farsi: 'داد', pronunciation: 'warkṛ' },
+          { pronoun: 'موږ', pashto: 'ورکړل', farsi: 'دادیم', pronunciation: 'warkṛal' },
+          { pronoun: 'تاسو', pashto: 'ورکړل', farsi: 'دادید', pronunciation: 'warkṛal' },
+          { pronoun: 'هغوی', pashto: 'ورکړل', farsi: 'دادند', pronunciation: 'warkṛal' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به ورکوم', farsi: 'خواهم داد', pronunciation: 'ba warkawam' },
+          { pronoun: 'ته', pashto: 'به ورکوې', farsi: 'خواهی داد', pronunciation: 'ba warkawe' },
+          { pronoun: 'هغه', pashto: 'به ورکوي', farsi: 'خواهد داد', pronunciation: 'ba warkawi' },
+          { pronoun: 'موږ', pashto: 'به ورکوو', farsi: 'خواهیم داد', pronunciation: 'ba warkawu' },
+          { pronoun: 'تاسو', pashto: 'به ورکوئ', farsi: 'خواهید داد', pronunciation: 'ba warkawy' },
+          { pronoun: 'هغوی', pashto: 'به ورکوي', farsi: 'خواهند داد', pronunciation: 'ba warkawi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'ورکره', farsi: 'بده', pronunciation: 'warkara' },
+          { pronoun: 'تاسو', pashto: 'ورکرئ', farsi: 'بدهید', pronunciation: 'warkarey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه ورکره', farsi: 'نده', pronunciation: 'ma warkara' },
+          { pronoun: 'تاسو', pashto: 'مه ورکرئ', farsi: 'ندهید', pronunciation: 'ma warkarey' },
+        ],
+      },
+    },
+  },
+
+  // فعل نیول - To Take
+  'to-take': {
+    id: 'to-take',
+    infinitive: 'نیول',
+    infinitiveFarsi: 'گرفتن',
+    root: 'نیس',
+    pastRoot: 'ونیول',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'نیسم', farsi: 'می‌گیرم', pronunciation: 'nisam' },
+          { pronoun: 'ته', pashto: 'نیسې', farsi: 'می‌گیری', pronunciation: 'nise' },
+          { pronoun: 'هغه', pashto: 'نیسي', farsi: 'می‌گیرد', pronunciation: 'nisi' },
+          { pronoun: 'موږ', pashto: 'نیسو', farsi: 'می‌گیریم', pronunciation: 'nisu' },
+          { pronoun: 'تاسو', pashto: 'نیسئ', farsi: 'می‌گیرید', pronunciation: 'nisey' },
+          { pronoun: 'هغوی', pashto: 'نیسي', farsi: 'می‌گیرند', pronunciation: 'nisi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'ونیول', farsi: 'گرفتم', pronunciation: 'waniyawəl' },
+          { pronoun: 'تا', pashto: 'ونیول', farsi: 'گرفتی', pronunciation: 'waniyawəl' },
+          { pronoun: 'هغه', pashto: 'ونیول', farsi: 'گرفت', pronunciation: 'waniyawəl' },
+          { pronoun: 'موږ', pashto: 'ونیول', farsi: 'گرفتیم', pronunciation: 'waniyawəl' },
+          { pronoun: 'تاسو', pashto: 'ونیول', farsi: 'گرفتید', pronunciation: 'waniyawəl' },
+          { pronoun: 'هغوی', pashto: 'ونیول', farsi: 'گرفتند', pronunciation: 'waniyawəl' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به نیسم', farsi: 'خواهم گرفت', pronunciation: 'ba nisam' },
+          { pronoun: 'ته', pashto: 'به نیسې', farsi: 'خواهی گرفت', pronunciation: 'ba nise' },
+          { pronoun: 'هغه', pashto: 'به نیسي', farsi: 'خواهد گرفت', pronunciation: 'ba nisi' },
+          { pronoun: 'موږ', pashto: 'به نیسو', farsi: 'خواهیم گرفت', pronunciation: 'ba nisu' },
+          { pronoun: 'تاسو', pashto: 'به نیسئ', farsi: 'خواهید گرفت', pronunciation: 'ba nisey' },
+          { pronoun: 'هغوی', pashto: 'به نیسي', farsi: 'خواهند گرفت', pronunciation: 'ba nisi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'ونیسه', farsi: 'بگیر', pronunciation: 'wanisa' },
+          { pronoun: 'تاسو', pashto: 'ونیسئ', farsi: 'بگیرید', pronunciation: 'wanisey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه نیسه', farsi: 'نگیر', pronunciation: 'ma nisa' },
+          { pronoun: 'تاسو', pashto: 'مه نیسئ', farsi: 'نگیرید', pronunciation: 'ma nisey' },
+        ],
+      },
+    },
+  },
+
+  // فعل ایستل - To Stand
+  'to-stand': {
+    id: 'to-stand',
+    infinitive: 'ایستل',
+    infinitiveFarsi: 'ایستادن',
+    root: 'ایسته‌ږ',
+    pastRoot: 'ایسته',
+    type: 'intransitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'ایسته‌ږم', farsi: 'می‌ایستم', pronunciation: 'āysteẓ̌am' },
+          { pronoun: 'ته', pashto: 'ایسته‌ږې', farsi: 'می‌ایستی', pronunciation: 'āysteẓ̌e' },
+          { pronoun: 'هغه', pashto: 'ایسته‌ږي', farsi: 'می‌ایستد', pronunciation: 'āysteẓ̌i' },
+          { pronoun: 'موږ', pashto: 'ایسته‌ږو', farsi: 'می‌ایستیم', pronunciation: 'āysteẓ̌u' },
+          { pronoun: 'تاسو', pashto: 'ایسته‌ږئ', farsi: 'می‌ایستید', pronunciation: 'āysteẓ̌ey' },
+          { pronoun: 'هغوی', pashto: 'ایسته‌ږي', farsi: 'می‌ایستند', pronunciation: 'āysteẓ̌i' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'ایسته', farsi: 'ایستادم', pronunciation: 'āysta' },
+          { pronoun: 'تا', pashto: 'ایسته', farsi: 'ایستادی', pronunciation: 'āysta' },
+          { pronoun: 'هغه', pashto: 'ایسته', farsi: 'ایستاد', pronunciation: 'āysta' },
+          { pronoun: 'موږ', pashto: 'ایستل', farsi: 'ایستادیم', pronunciation: 'āystal' },
+          { pronoun: 'تاسو', pashto: 'ایستل', farsi: 'ایستادید', pronunciation: 'āystal' },
+          { pronoun: 'هغوی', pashto: 'ایستل', farsi: 'ایستادند', pronunciation: 'āystal' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به ایسته‌ږم', farsi: 'خواهم ایستاد', pronunciation: 'ba āysteẓ̌am' },
+          { pronoun: 'ته', pashto: 'به ایسته‌ږې', farsi: 'خواهی ایستاد', pronunciation: 'ba āysteẓ̌e' },
+          { pronoun: 'هغه', pashto: 'به ایسته‌ږي', farsi: 'خواهد ایستاد', pronunciation: 'ba āysteẓ̌i' },
+          { pronoun: 'موږ', pashto: 'به ایسته‌ږو', farsi: 'خواهیم ایستاد', pronunciation: 'ba āysteẓ̌u' },
+          { pronoun: 'تاسو', pashto: 'به ایسته‌ږئ', farsi: 'خواهید ایستاد', pronunciation: 'ba āysteẓ̌ey' },
+          { pronoun: 'هغوی', pashto: 'به ایسته‌ږي', farsi: 'خواهند ایستاد', pronunciation: 'ba āysteẓ̌i' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'ایسته‌ږه', farsi: 'بایست', pronunciation: 'āysteẓ̌a' },
+          { pronoun: 'تاسو', pashto: 'ایسته‌ږئ', farsi: 'بایستید', pronunciation: 'āysteẓ̌ey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه ایسته‌ږه', farsi: 'نایست', pronunciation: 'ma āysteẓ̌a' },
+          { pronoun: 'تاسو', pashto: 'مه ایسته‌ږئ', farsi: 'نایستید', pronunciation: 'ma āysteẓ̌ey' },
+        ],
+      },
+    },
+  },
+
+  // فعل منډې وهل - To Run
+  'to-run': {
+    id: 'to-run',
+    infinitive: 'منډې وهل',
+    infinitiveFarsi: 'دویدن',
+    root: 'منډې وه',
+    pastRoot: 'منډې وو',
+    type: 'intransitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'منډې وهم', farsi: 'می‌دوم', pronunciation: 'munḍe waham' },
+          { pronoun: 'ته', pashto: 'منډې وهې', farsi: 'می‌دوی', pronunciation: 'munḍe wahe' },
+          { pronoun: 'هغه', pashto: 'منډې وهي', farsi: 'می‌دود', pronunciation: 'munḍe wahi' },
+          { pronoun: 'موږ', pashto: 'منډې وهو', farsi: 'می‌دویم', pronunciation: 'munḍe wahu' },
+          { pronoun: 'تاسو', pashto: 'منډې وهئ', farsi: 'می‌دوید', pronunciation: 'munḍe wahey' },
+          { pronoun: 'هغوی', pashto: 'منډې وهي', farsi: 'می‌دوند', pronunciation: 'munḍe wahi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'منډې ووهم', farsi: 'دویدم', pronunciation: 'munḍe wawaham' },
+          { pronoun: 'تا', pashto: 'منډې ووهې', farsi: 'دویدی', pronunciation: 'munḍe wawahe' },
+          { pronoun: 'هغه', pashto: 'منډې ووه', farsi: 'دوید', pronunciation: 'munḍe wawa' },
+          { pronoun: 'موږ', pashto: 'منډې ووهل', farsi: 'دویدیم', pronunciation: 'munḍe wawal' },
+          { pronoun: 'تاسو', pashto: 'منډې ووهل', farsi: 'دویدید', pronunciation: 'munḍe wawal' },
+          { pronoun: 'هغوی', pashto: 'منډې ووهل', farsi: 'دویدند', pronunciation: 'munḍe wawal' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به منډې وهم', farsi: 'خواهم دوید', pronunciation: 'ba munḍe waham' },
+          { pronoun: 'ته', pashto: 'به منډې وهې', farsi: 'خواهی دوید', pronunciation: 'ba munḍe wahe' },
+          { pronoun: 'هغه', pashto: 'به منډې وهي', farsi: 'خواهد دوید', pronunciation: 'ba munḍe wahi' },
+          { pronoun: 'موږ', pashto: 'به منډې وهو', farsi: 'خواهیم دوید', pronunciation: 'ba munḍe wahu' },
+          { pronoun: 'تاسو', pashto: 'به منډې وهئ', farsi: 'خواهید دوید', pronunciation: 'ba munḍe wahey' },
+          { pronoun: 'هغوی', pashto: 'به منډې وهي', farsi: 'خواهند دوید', pronunciation: 'ba munḍe wahi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'منډې وه', farsi: 'بدو', pronunciation: 'munḍe wa' },
+          { pronoun: 'تاسو', pashto: 'منډې وهئ', farsi: 'بدوید', pronunciation: 'munḍe wahey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه منډې وه', farsi: 'ندو', pronunciation: 'ma munḍe wa' },
+          { pronoun: 'تاسو', pashto: 'مه منډې وهئ', farsi: 'ندوید', pronunciation: 'ma munḍe wahey' },
+        ],
+      },
+    },
+  },
+
+  // فعل ترل - To Close
+  'to-close': {
+    id: 'to-close',
+    infinitive: 'ترل',
+    infinitiveFarsi: 'بستن',
+    root: 'تر',
+    pastRoot: 'وتر',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'ترم', farsi: 'می‌بندم', pronunciation: 'taram' },
+          { pronoun: 'ته', pashto: 'تره', farsi: 'می‌بندی', pronunciation: 'tara' },
+          { pronoun: 'هغه', pashto: 'تري', farsi: 'می‌بندد', pronunciation: 'tari' },
+          { pronoun: 'موږ', pashto: 'ترو', farsi: 'می‌بندیم', pronunciation: 'taru' },
+          { pronoun: 'تاسو', pashto: 'تره', farsi: 'می‌بندید', pronunciation: 'tara' },
+          { pronoun: 'هغوی', pashto: 'تري', farsi: 'می‌بندند', pronunciation: 'tari' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'وترم', farsi: 'بستم', pronunciation: 'wtaram' },
+          { pronoun: 'تا', pashto: 'وتره', farsi: 'بستی', pronunciation: 'wtara' },
+          { pronoun: 'هغه', pashto: 'وتر', farsi: 'بست', pronunciation: 'wtar' },
+          { pronoun: 'موږ', pashto: 'وترل', farsi: 'بستیم', pronunciation: 'wtaral' },
+          { pronoun: 'تاسو', pashto: 'وترل', farsi: 'بستید', pronunciation: 'wtaral' },
+          { pronoun: 'هغوی', pashto: 'وترل', farsi: 'بستند', pronunciation: 'wtaral' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به ترم', farsi: 'خواهم بست', pronunciation: 'ba taram' },
+          { pronoun: 'ته', pashto: 'به تره', farsi: 'خواهی بست', pronunciation: 'ba tara' },
+          { pronoun: 'هغه', pashto: 'به تري', farsi: 'خواهد بست', pronunciation: 'ba tari' },
+          { pronoun: 'موږ', pashto: 'به تरو', farsi: 'خواهیم بست', pronunciation: 'ba taru' },
+          { pronoun: 'تاسو', pashto: 'به تره', farsi: 'خواهید بست', pronunciation: 'ba tara' },
+          { pronoun: 'هغوی', pashto: 'به تري', farsi: 'خواهند بست', pronunciation: 'ba tari' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'وتره', farsi: 'ببند', pronunciation: 'wtara' },
+          { pronoun: 'تاسو', pashto: 'وترئ', farsi: 'ببندید', pronunciation: 'wtarey' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه تره', farsi: 'نبند', pronunciation: 'ma tara' },
+          { pronoun: 'تاسو', pashto: 'مه ترئ', farsi: 'نبندید', pronunciation: 'ma tarey' },
+        ],
+      },
+    },
+  },
+
+  // فعل خلاصول - To Open
+  'to-open': {
+    id: 'to-open',
+    infinitive: 'خلاصول',
+    infinitiveFarsi: 'باز کردن',
+    root: 'خلاص',
+    pastRoot: 'وخلاص',
+    type: 'transitive',
+    tenses: {
+      present: {
+        name: 'حال',
+        namePashto: 'اوسمهال',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'خلاصوم', farsi: 'می‌کنم', pronunciation: 'khlaasawam' },
+          { pronoun: 'ته', pashto: 'خلاصوې', farsi: 'می‌کنی', pronunciation: 'khlaasawe' },
+          { pronoun: 'هغه', pashto: 'خلاصوي', farsi: 'می‌کند', pronunciation: 'khlaasawi' },
+          { pronoun: 'موږ', pashto: 'خلاصوو', farsi: 'می‌کنیم', pronunciation: 'khlaasawu' },
+          { pronoun: 'تاسو', pashto: 'خلاصوئ', farsi: 'می‌کنید', pronunciation: 'khlaasawy' },
+          { pronoun: 'هغوی', pashto: 'خلاصوي', farsi: 'می‌کنند', pronunciation: 'khlaasawi' },
+        ],
+      },
+      past: {
+        name: 'گذشته',
+        namePashto: 'تېرمهال',
+        conjugations: [
+          { pronoun: 'ما', pashto: 'وخلاصم', farsi: 'کردم', pronunciation: 'wkhlaasam' },
+          { pronoun: 'تا', pashto: 'وخلاصې', farsi: 'کردی', pronunciation: 'wkhlaase' },
+          { pronoun: 'هغه', pashto: 'وخلاص', farsi: 'کرد', pronunciation: 'wkhlaas' },
+          { pronoun: 'موږ', pashto: 'وخلاصل', farsi: 'کردیم', pronunciation: 'wkhlaasəl' },
+          { pronoun: 'تاسو', pashto: 'وخلاصل', farsi: 'کردید', pronunciation: 'wkhlaasəl' },
+          { pronoun: 'هغوی', pashto: 'وخلاصل', farsi: 'کردند', pronunciation: 'wkhlaasəl' },
+        ],
+      },
+      future: {
+        name: 'آینده',
+        namePashto: 'راتلونکی',
+        conjugations: [
+          { pronoun: 'زه', pashto: 'به خلاصوم', farsi: 'خواهم کرد', pronunciation: 'ba khlaasawam' },
+          { pronoun: 'ته', pashto: 'به خلاصوې', farsi: 'خواهی کرد', pronunciation: 'ba khlaasawe' },
+          { pronoun: 'هغه', pashto: 'به خلاصوي', farsi: 'خواهد کرد', pronunciation: 'ba khlaasawi' },
+          { pronoun: 'موږ', pashto: 'به خلاصوو', farsi: 'خواهیم کرد', pronunciation: 'ba khlaasawu' },
+          { pronoun: 'تاسو', pashto: 'به خلاصوئ', farsi: 'خواهید کرد', pronunciation: 'ba khlaasawy' },
+          { pronoun: 'هغوی', pashto: 'به خلاصوي', farsi: 'خواهند کرد', pronunciation: 'ba khlaasawi' },
+        ],
+      },
+      imperative: {
+        name: 'امری',
+        namePashto: 'امري',
+        conjugations: [
+          { pronoun: 'ته', pashto: 'وخلاصه', farsi: 'باز کن', pronunciation: 'wkhlaasa' },
+          { pronoun: 'تاسو', pashto: 'وخلاصئ', farsi: 'باز کنید', pronunciation: 'wkhlaasay' },
+        ],
+        negative: [
+          { pronoun: 'ته', pashto: 'مه خلاصه', farsi: 'باز نکن', pronunciation: 'ma khlaasa' },
+          { pronoun: 'تاسو', pashto: 'مه خلاصئ', farsi: 'باز نکنید', pronunciation: 'ma khlaasay' },
+        ],
+      },
+    },
+  },
 };
-
-
 
 // لیست فعل‌ها برای نمایش
 export const verbList = [
@@ -1617,13 +2215,18 @@ export const verbList = [
   { id: 'to-write', name: 'نوشتن', namePashto: 'لیکل', root: 'لیک' },
   { id: 'to-read', name: 'خواندن', namePashto: 'لوستل', root: 'لول' },
   { id: 'to-have', name: 'داشتن', namePashto: 'لرل', root: 'لر' },
+  { id: 'to-hit', name: 'زدن', namePashto: 'وهل', root: 'وه' },
+  { id: 'to-wash', name: 'شستن', namePashto: 'مینځل', root: 'مینځ' },
   { id: 'to-give', name: 'دادن', namePashto: 'ورکول', root: 'ورکو' },
-  { id: 'to-take', name: 'گرفتن', namePashto: 'اخیستل', root: 'اخل' },
+  { id: 'to-take', name: 'گرفتن', namePashto: 'نیول', root: 'نیس' },
+  { id: 'to-stand', name: 'ایستادن', namePashto: 'ایستل', root: 'ایسته‌ږ' },
+  { id: 'to-run', name: 'دویدن', namePashto: 'منډې وهل', root: 'منډې وه' },
+  { id: 'to-close', name: 'بستن', namePashto: 'ترل', root: 'تر' },
+  { id: 'to-open', name: 'باز کردن', namePashto: 'خلاصول', root: 'خلاص' },
   { id: 'to-carry', name: 'بردن', namePashto: 'وړل', root: 'وړ' },
   { id: 'to-bring', name: 'آوردن', namePashto: 'راوړل', root: 'راوړ' },
   { id: 'to-understand', name: 'فهمیدن', namePashto: 'پوهېدل', root: 'پوه' },
   { id: 'to-sit', name: 'نشستن', namePashto: 'کېناستل', root: 'کېن' },
-  { id: 'to-stand', name: 'ایستادن', namePashto: 'ودرېدل', root: 'ودرېږ' },
   { id: 'to-sleep', name: 'خوابیدن', namePashto: 'ویدېدل', root: 'ویده' },
   { id: 'to-become', name: 'شدن', namePashto: 'کېدل', root: 'کېږ' },
   { id: 'to-love', name: 'دوست داشتن', namePashto: 'خوښول', root: 'خوښ' },

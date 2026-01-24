@@ -103,6 +103,14 @@
         { "id": "verb-to-do", "title": "فعل کردن (کوم)", "titleFa": "فعل کردن (کوم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "verb-to-pour", "title": "فعل ریختن (ریختم)", "titleFa": "فعل ریختن (ریختم)", "difficulty": "medium", "duration": "۲۵ دقیقه", "hasPractice": false },
         { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
+        { "id": "verb-to-hit", "title": "فعل زدن (زنم)", "titleFa": "فعل زدن (زنم)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-wash", "title": "فعل شستل (شونم)", "titleFa": "فعل شستل (شونم)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-give", "title": "فعل ورکول (ورکوم)", "titleFa": "فعل ورکول (ورکوم)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-take", "title": "فعل نیول (نیسم)", "titleFa": "فعل نیول (نیسم)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-stand", "title": "فعل ایستل (ایسته‌ږم)", "titleFa": "فعل ایستل (ایسته‌ږم)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-run", "title": "فعل منډې وهل (دویدن)", "titleFa": "فعل منډې وهل (دویدن)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-close", "title": "فعل ترل (بستن)", "titleFa": "فعل ترل (بستن)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "verb-to-open", "title": "فعل خلاصول (باز کردن)", "titleFa": "فعل خلاصول (باز کردن)", "difficulty": "medium", "duration": "۲۰ دقیقه" },
         { "id": "modal-verbs", "title": "فعل‌های کمکی (Modal Verbs)", "titleFa": "فعل‌های کمکی", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "transitive-verbs", "title": "فعل‌های انتقالی", "titleFa": "فعل‌های انتقالی", "difficulty": "medium", "duration": "۲۵ دقیقه" }
       ]

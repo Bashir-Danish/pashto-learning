@@ -198,6 +198,64 @@ export const verbs = {
     },
   ],
 
+  // فعل‌های اصلی و پرکاربرد
+  essential: [
+    {
+      infinitive: 'زدن',
+      farsi: 'زدن',
+      pronunciation: 'zadan',
+      present: 'زنم',
+      presentPronunciation: 'zanam',
+      past: 'وزدم',
+      pastPronunciation: 'wazadam',
+    },
+    {
+      infinitive: 'شستل',
+      farsi: 'شستن',
+      pronunciation: 'shastəl',
+      present: 'شونم',
+      presentPronunciation: 'shwanam',
+      past: 'وشستم',
+      pastPronunciation: 'washastam',
+    },
+    {
+      infinitive: 'ورکول',
+      farsi: 'دادن',
+      pronunciation: 'warkawəl',
+      present: 'ورکوم',
+      presentPronunciation: 'warkawəm',
+      past: 'ورکړ',
+      pastPronunciation: 'warkṛ',
+    },
+    {
+      infinitive: 'نیول',
+      farsi: 'گرفتن',
+      pronunciation: 'niyawəl',
+      present: 'نیسم',
+      presentPronunciation: 'nisam',
+      past: 'ونیول',
+      pastPronunciation: 'waniyawəl',
+    },
+    {
+      infinitive: 'ایستل',
+      farsi: 'ایستادن',
+      pronunciation: 'āystal',
+      present: 'ایسته‌ږم',
+      presentPronunciation: 'āysteẓ̌am',
+      past: 'ایسته',
+      pastPronunciation: 'āysta',
+    },
+    {
+      infinitive: 'ناستل',
+      farsi: 'نشستن',
+      pronunciation: 'nāstal',
+      present: 'کېنم',
+      presentPronunciation: 'kenam',
+      past: 'ناست',
+      pastPronunciation: 'nāst',
+    },
+  ],
+
   // جملات با فعل
   sentences: [
     {
