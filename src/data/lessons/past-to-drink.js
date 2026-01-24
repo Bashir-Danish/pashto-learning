@@ -1,4 +1,4 @@
-export const PastToDrinkLesson = {
+export const pastToDrinkLesson = {
   id: 'past-to-drink',
   title: 'نوشیدم (وڅښم)',
   titleFa: 'نوشیدم (وڅښم)',

@@ -1,4 +1,4 @@
-export const PastToBeLesson = {
+export const pastToBeLesson = {
   id: 'past-to-be',
   title: 'بودم (وم)',
   titleFa: 'بودم (وم)',
