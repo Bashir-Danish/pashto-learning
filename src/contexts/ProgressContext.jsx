@@ -49,6 +49,17 @@ const getRoadmapData = () => [
   {
     phase: 5,
     lessons: [
+      { id: 'family' },
+      { id: 'numbers-11-100' },
+      { id: 'food' },
+      { id: 'body-parts' },
+      { id: 'colors' },
+      { id: 'days-months' },
+    ],
+  },
+  {
+    phase: 6,
+    lessons: [
       { id: 'verb-to-be' },
       { id: 'verb-to-go' },
       { id: 'verb-to-come' },
@@ -58,17 +69,6 @@ const getRoadmapData = () => [
       { id: 'verb-to-want' },
       { id: 'modal-verbs' },
       { id: 'transitive-verbs' },
-    ],
-  },
-  {
-    phase: 6,
-    lessons: [
-      { id: 'family' },
-      { id: 'numbers-11-100' },
-      { id: 'food' },
-      { id: 'body-parts' },
-      { id: 'colors' },
-      { id: 'days-months' },
     ],
   },
   {

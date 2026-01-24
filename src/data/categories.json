@@ -68,14 +68,32 @@
       ]
     },
     {
+      "id": "vocabulary-basic",
+      "name": "۵. واژگان پایه",
+      "namePashto": "۵. بنسټیز لغات",
+      "nameFa": "واژگان پایه",
+      "icon": "Library",
+      "color": "#14b8a6",
+      "description": "کلمات ضروری برای مکالمه روزمره",
+      "order": 5,
+      "lessons": [
+        { "id": "family", "title": "خانواده", "titleFa": "خانواده", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "numbers-11-100", "title": "اعداد ۱۱ تا ۱۰۰", "titleFa": "اعداد ۱۱ تا ۱۰۰", "difficulty": "medium", "duration": "۲۰ دقیقه" },
+        { "id": "food", "title": "غذا و نوشیدنی", "titleFa": "غذا و نوشیدنی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "body-parts", "title": "اعضای بدن", "titleFa": "اعضای بدن", "difficulty": "easy", "duration": "۱۵ دقیقه" },
+        { "id": "colors", "title": "رنگ‌ها", "titleFa": "رنگ‌ها", "difficulty": "easy", "duration": "۱۰ دقیقه" },
+        { "id": "days-months", "title": "روزها و ماه‌ها", "titleFa": "روزها و ماه‌ها", "difficulty": "easy", "duration": "۱۵ دقیقه" }
+      ]
+    },
+    {
       "id": "verbs-present",
-      "name": "۵. فعل حال",
-      "namePashto": "۵. اوسمهال فعلونه",
+      "name": "۶. فعل حال",
+      "namePashto": "۶. اوسمهال فعلونه",
       "nameFa": "فعل حال",
       "icon": "Play",
       "color": "#f59e0b",
       "description": "گردان فعل‌ها در زمان حال",
-      "order": 5,
+      "order": 6,
       "lessons": [
         { "id": "verb-to-be", "title": "فعل بودن (یم/دی)", "titleFa": "فعل بودن (یم/دی)", "difficulty": "easy", "duration": "۲۰ دقیقه" },
         { "id": "verb-to-go", "title": "فعل رفتن (ځم)", "titleFa": "فعل رفتن (ځم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
@@ -86,24 +104,6 @@
         { "id": "verb-to-want", "title": "فعل خواستن (غواړم)", "titleFa": "فعل خواستن (غواړم)", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "modal-verbs", "title": "فعل‌های کمکی (Modal Verbs)", "titleFa": "فعل‌های کمکی", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "transitive-verbs", "title": "فعل‌های انتقالی", "titleFa": "فعل‌های انتقالی", "difficulty": "medium", "duration": "۲۵ دقیقه" }
-      ]
-    },
-    {
-      "id": "vocabulary-basic",
-      "name": "۶. واژگان پایه",
-      "namePashto": "۶. بنسټیز لغات",
-      "nameFa": "واژگان پایه",
-      "icon": "Library",
-      "color": "#14b8a6",
-      "description": "کلمات ضروری روزمره",
-      "order": 6,
-      "lessons": [
-        { "id": "family", "title": "خانواده", "titleFa": "خانواده", "difficulty": "easy", "duration": "۱۵ دقیقه" },
-        { "id": "numbers-11-100", "title": "اعداد ۱۱ تا ۱۰۰", "titleFa": "اعداد ۱۱ تا ۱۰۰", "difficulty": "medium", "duration": "۲۰ دقیقه" },
-        { "id": "food", "title": "غذا و نوشیدنی", "titleFa": "غذا و نوشیدنی", "difficulty": "easy", "duration": "۱۵ دقیقه" },
-        { "id": "body-parts", "title": "اعضای بدن", "titleFa": "اعضای بدن", "difficulty": "easy", "duration": "۱۵ دقیقه" },
-        { "id": "colors", "title": "رنگ‌ها", "titleFa": "رنگ‌ها", "difficulty": "easy", "duration": "۱۰ دقیقه" },
-        { "id": "days-months", "title": "روزها و ماه‌ها", "titleFa": "روزها و ماه‌ها", "difficulty": "easy", "duration": "۱۵ دقیقه" }
       ]
     },
     {
@@ -125,32 +125,32 @@
       ]
     },
     {
-      "id": "verbs-comprehensive",
-      "name": "۸. فعل‌های جامع",
-      "namePashto": "۸. د فعلونو مجموعه",
-      "nameFa": "فعل‌های جامع",
-      "icon": "Play",
-      "color": "#f59e0b",
-      "description": "فعل‌های اساسی در تمام زمان‌ها",
-      "order": 8,
-      "lessons": [
-        { "id": "comprehensive-verbs", "title": "فعل‌های اساسی - تمام زمان‌ها", "titleFa": "فعل‌های اساسی - تمام زمان‌ها", "difficulty": "hard", "duration": "۴۵ دقیقه" }
-      ]
-    },
-    {
       "id": "verbs-future",
-      "name": "۹. فعل آینده و امری",
-      "namePashto": "۹. راتلونکي او امري فعلونه",
+      "name": "۸. فعل آینده و امری",
+      "namePashto": "۸. راتلونکي او امري فعلونه",
       "nameFa": "فعل آینده و امری",
       "icon": "ArrowRight",
       "color": "#06b6d4",
       "description": "زمان آینده و دستوری",
-      "order": 9,
+      "order": 8,
       "lessons": [
         { "id": "future-tense", "title": "زمان آینده", "titleFa": "زمان آینده", "difficulty": "medium", "duration": "۳۰ دقیقه" },
         { "id": "imperative", "title": "فعل امری", "titleFa": "فعل امری", "difficulty": "medium", "duration": "۲۵ دقیقه" },
         { "id": "imperative-formal", "title": "امری رسمی", "titleFa": "امری رسمی", "difficulty": "medium", "duration": "۲۰ دقیقه" },
         { "id": "requests", "title": "درخواست کردن", "titleFa": "درخواست کردن", "difficulty": "medium", "duration": "۲۰ دقیقه" }
+      ]
+    },
+    {
+      "id": "verbs-comprehensive",
+      "name": "۹. فعل‌های جامع",
+      "namePashto": "۹. د فعلونو مجموعه",
+      "nameFa": "فعل‌های جامع",
+      "icon": "Play",
+      "color": "#f59e0b",
+      "description": "فعل‌های اساسی در تمام زمان‌ها",
+      "order": 9,
+      "lessons": [
+        { "id": "comprehensive-verbs", "title": "فعل‌های اساسی - تمام زمان‌ها", "titleFa": "فعل‌های اساسی - تمام زمان‌ها", "difficulty": "hard", "duration": "۴۵ دقیقه" }
       ]
     },
     {
