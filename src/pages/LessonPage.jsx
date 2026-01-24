@@ -171,6 +171,58 @@ export default function LessonPage() {
 function formatContent(content) {
   if (!content) return '';
   
+  // اگر content یک array است، آن را به string تبدیل کنید
+  if (Array.isArray(content)) {
+    return content.map(section => {
+      let html = '';
+      
+      if (section.type === 'intro') {
+        html += `<h2 class="text-xl font-bold mt-8 mb-4 text-slate-200">${section.title}</h2>`;
+        html += `<p class="mb-3 text-slate-300">${section.text}</p>`;
+      } else if (section.type === 'conjugation') {
+        html += `<h3 class="text-lg font-bold mt-6 mb-3 text-slate-200">${section.title}</h3>`;
+        html += '<table class="w-full border-collapse my-4 text-sm">';
+        html += '<tr><th class="border border-slate-600 px-3 py-2 bg-slate-700 font-bold text-slate-200">ضمیر</th>';
+        html += '<th class="border border-slate-600 px-3 py-2 bg-slate-700 font-bold text-slate-200">پشتو</th>';
+        html += '<th class="border border-slate-600 px-3 py-2 bg-slate-700 font-bold text-slate-200">انگلیسی</th>';
+        html += '<th class="border border-slate-600 px-3 py-2 bg-slate-700 font-bold text-slate-200">مثال</th></tr>';
+        
+        section.conjugations.forEach(conj => {
+          html += '<tr>';
+          html += `<td class="border border-slate-600 px-3 py-2 text-slate-300">${conj.pronoun}</td>`;
+          html += `<td class="border border-slate-600 px-3 py-2 text-slate-300">${conj.pashto}</td>`;
+          html += `<td class="border border-slate-600 px-3 py-2 text-slate-300">${conj.english}</td>`;
+          html += `<td class="border border-slate-600 px-3 py-2 text-slate-300">${conj.example}</td>`;
+          html += '</tr>';
+        });
+        html += '</table>';
+      } else if (section.type === 'examples') {
+        html += `<h3 class="text-lg font-bold mt-6 mb-3 text-slate-200">${section.title}</h3>`;
+        section.examples.forEach(ex => {
+          html += `<div class="mb-4 p-3 bg-slate-700/50 rounded-lg border border-slate-600">`;
+          html += `<p class="text-slate-300"><strong class="text-emerald-400">پشتو:</strong> ${ex.pashto}</p>`;
+          html += `<p class="text-slate-300"><strong class="text-emerald-400">انگلیسی:</strong> ${ex.english}</p>`;
+          html += `<p class="text-slate-300"><strong class="text-emerald-400">فارسی:</strong> ${ex.farsi}</p>`;
+          html += `</div>`;
+        });
+      } else if (section.type === 'practice') {
+        html += `<h3 class="text-lg font-bold mt-6 mb-3 text-slate-200">${section.title}</h3>`;
+        section.exercises.forEach((ex, idx) => {
+          html += `<div class="mb-4 p-3 bg-slate-700/50 rounded-lg border border-slate-600">`;
+          html += `<p class="text-slate-300 mb-2">${ex.question}</p>`;
+          html += `<div class="flex gap-2 flex-wrap">`;
+          ex.options.forEach(opt => {
+            html += `<button class="px-3 py-1 bg-slate-600 hover:bg-slate-500 text-slate-300 rounded text-sm">${opt}</button>`;
+          });
+          html += `</div>`;
+          html += `</div>`;
+        });
+      }
+      
+      return html;
+    }).join('');
+  }
+  
   // پردازش جدول‌ها
   const processTable = (tableContent) => {
     const lines = tableContent.trim().split('\n');
