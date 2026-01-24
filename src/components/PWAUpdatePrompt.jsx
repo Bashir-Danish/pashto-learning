@@ -58,7 +58,7 @@ export default function PWAUpdatePrompt() {
   if (!showPrompt) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-[9999] max-w-sm">
+    <div className="fixed bottom-4 right-4 z-[99999] max-w-sm pointer-events-auto">
       <div className="bg-slate-800 border border-emerald-500/50 rounded-xl p-4 shadow-lg">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
