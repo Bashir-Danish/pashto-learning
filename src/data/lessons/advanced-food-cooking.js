@@ -18,14 +18,12 @@ export const advancedFoodCookingLesson = {
 
 | پښتو | فارسی | تلفظ کندهاری | معنی |
 |------|-------|------------|------|
-| کول | پختن | kol | to cook |
-| پخول | پختن | pakhol | to cook (alternative) |
-| جوړول | آماده کردن | joṛol | to prepare |
-| خوړول | خوردن | khwṛol | to eat |
-| څښل | نوشیدن | tsṣal | to drink |
-| ملاوول | مخلوط کردن | malāwol | to mix |
-| کاتل | برش دادن | kātal | to cut |
-| ډاډ کول | تکان دادن | ḍāḍ kol | to stir |
+| پخول | پختن | Pakhowul | to cook |
+| تیارول | آماده کردن | Tayārawul | to prepare |
+| خوړل | خوردن | Khwaṛəl | to eat |
+| څښل | نوشیدن | **Tsṣ̌əl** | to drink |
+| ګډول | مخلوط کردن | Gaḍawul | to mix |
+| پریکول | برش دادن | Prekawul | to cut |
 
 ## فعل‌های کمکی (Modal Verbs)
 
@@ -40,10 +38,9 @@ export const advancedFoodCookingLesson = {
 
 ### مثال‌های استفاده:
 
-- **زه کولای شم ډوډۍ پخول** - من می‌توانم نان بپزم (I can cook bread)
-- **هغه نشی کولی قورمه جوړول** - او نمی‌تواند قورمه درست کند (He cannot prepare curry)
-- **باید تاسو مرچ ملاوول** - شما باید فلفل را اضافه کنید (You should add pepper)
-- **ما خوښ کولو** - من پختن را دوست دارم (I like cooking)
+- **زه کولای شم ډوډۍ پخه کړم** - من می‌توانم نان بپزم.
+- **هغه نشي کولای قورمه جوړه کړي** - او نمی‌تواند قورمه درست کند.
+- **ما ته دا غذا خوښېږي** - من این غذا را دوست دارم (لغوی: به من این غذا خوش می‌آید).
 
 ## غذاهای اصلی (Main Dishes)
 

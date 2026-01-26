@@ -11,6 +11,10 @@ const conversationList = [
   { id: 'phone', ...conversations.phone },
   { id: 'doctor', ...conversations.doctor },
   { id: 'guestVisit', ...conversations.guestVisit },
+  { id: 'tailor', ...conversations.tailor },
+  { id: 'mechanic', ...conversations.mechanic },
+  { id: 'airport', ...conversations.airport },
+  { id: 'family_gathering', ...conversations.family_gathering },
   { id: 'pharmacy', ...conversations.pharmacy },
   { id: 'bank', ...conversations.bank },
   { id: 'mosque', ...conversations.mosque },
@@ -47,7 +51,7 @@ export default function ConversationPage() {
             در هر مکالمه، نسخه‌های رسمی و غیررسمی جملات نشان داده می‌شود تا بتوانید در موقعیت‌های مختلف از آنها استفاده کنید.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-4">
           {conversationList.map((conv) => (
             <Link
@@ -112,17 +116,16 @@ export default function ConversationPage() {
         {conversation.description && (
           <p className="text-sm text-slate-500">{conversation.description}</p>
         )}
-        
+
         {/* Toggle for alternatives */}
         {hasAlternatives && (
           <div className="mt-4 flex items-center gap-3">
             <button
               onClick={() => setShowAlternatives(!showAlternatives)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
-                showAlternatives 
-                  ? 'bg-purple-500 text-white' 
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${showAlternatives
+                  ? 'bg-purple-500 text-white'
                   : 'bg-slate-700 text-slate-300 hover:bg-slate-600 border border-slate-600'
-              }`}
+                }`}
             >
               {showAlternatives ? '✓ نمایش رسمی/غیررسمی' : 'نمایش رسمی/غیررسمی'}
             </button>
@@ -136,17 +139,16 @@ export default function ConversationPage() {
           {conversation.dialogue.map((line, idx) => {
             const isEven = idx % 2 === 0;
             const hasAlt = line.formalAlt || line.informalAlt;
-            
+
             return (
               <div key={idx} className="space-y-2">
                 {/* Main dialogue */}
                 <div className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}>
-                  <div 
-                    className={`max-w-[85%] p-4 rounded-2xl ${
-                      isEven 
-                        ? 'bg-purple-600 text-white rounded-br-sm' 
+                  <div
+                    className={`max-w-[85%] p-4 rounded-2xl ${isEven
+                        ? 'bg-purple-600 text-white rounded-br-sm'
                         : 'bg-slate-700 text-slate-200 rounded-bl-sm border border-slate-600'
-                    }`}
+                      }`}
                   >
                     <span className={`text-xs block mb-1 ${isEven ? 'text-purple-200' : 'text-slate-500'}`}>
                       {line.speaker}
@@ -157,20 +159,18 @@ export default function ConversationPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Alternative version (formal/informal) */}
                 {showAlternatives && hasAlt && (
                   <div className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}>
-                    <div 
-                      className={`max-w-[85%] p-3 rounded-xl border-2 border-dashed ${
-                        isEven 
-                          ? 'border-purple-500/50 bg-purple-500/10' 
+                    <div
+                      className={`max-w-[85%] p-3 rounded-xl border-2 border-dashed ${isEven
+                          ? 'border-purple-500/50 bg-purple-500/10'
                           : 'border-slate-600 bg-slate-700/50'
-                      }`}
+                        }`}
                     >
-                      <span className={`text-xs font-medium block mb-1 ${
-                        line.formalAlt ? 'text-emerald-400' : 'text-amber-400'
-                      }`}>
+                      <span className={`text-xs font-medium block mb-1 ${line.formalAlt ? 'text-emerald-400' : 'text-amber-400'
+                        }`}>
                         {line.formalAlt ? '📋 رسمی:' : '💬 غیررسمی:'}
                       </span>
                       <p className="font-bold text-slate-200">
@@ -205,7 +205,7 @@ export default function ConversationPage() {
               <ChevronDown className="w-5 h-5 text-amber-400" />
             )}
           </button>
-          
+
           {showVocab && (
             <div className="p-4">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -239,7 +239,7 @@ export default function ConversationPage() {
               <ChevronDown className="w-5 h-5 text-emerald-400" />
             )}
           </button>
-          
+
           {showPhrases && (
             <div className="p-4 space-y-3">
               {conversation.usefulPhrases.map((phrase, idx) => (

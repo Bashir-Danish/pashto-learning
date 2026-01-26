@@ -1,285 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Map, CheckCircle2, Circle, ChevronDown, ChevronUp, 
-  BookOpen, MessageCircle, Users, Play, Library, Clock, 
+import {
+  Map, CheckCircle2, Circle, ChevronDown, ChevronUp,
+  BookOpen, MessageCircle, Users, Play, Library, Clock,
   ArrowRight, Star, Target, Zap, Trophy
 } from 'lucide-react';
 import { useProgress } from '../contexts/ProgressContext';
 
-const roadmapData = [
-  {
-    phase: 1,
-    title: 'مرحله ۱: آشنایی با الفبا و صداها',
-    titlePashto: 'لومړی پړاو: الفبا او غږونه',
-    duration: '۱-۲ هفته',
-    icon: BookOpen,
-    color: 'emerald',
-    description: 'یادگیری حروف الفبای پشتو و صداهای خاص کندهاری',
-    goals: [
-      'شناخت ۴۴ حرف الفبای پشتو',
-      'یادگیری ۴ حرف خاص پشتو (ښ، ږ، ځ، څ)',
-      'تمرین صداهای برگشته (ټ، ډ، ړ، ڼ)',
-      'آشنایی با مصوت‌ها و تلفظ کندهاری',
-    ],
-    lessons: [
-      { id: 'alphabet-intro', title: 'آشنایی با الفبا' },
-      { id: 'unique-letters', title: 'حروف خاص پښتو' },
-      { id: 'kandahari-sounds', title: 'صداهای کندهاری' },
-      { id: 'vowels', title: 'مصوت‌ها' },
-    ],
-    tips: 'هر روز ۱۵ دقیقه تمرین تلفظ کنید. از صفحه الفبا استفاده کنید.',
-  },
-  {
-    phase: 2,
-    title: 'مرحله ۲: سلام و احوالپرسی',
-    titlePashto: 'دویم پړاو: سلام او حال احوال',
-    duration: '۱ هفته',
-    icon: MessageCircle,
-    color: 'pink',
-    description: 'یادگیری عبارات اولیه برای شروع مکالمه',
-    goals: [
-      'سلام کردن رسمی و غیررسمی',
-      'پرسیدن حال و جواب دادن',
-      'معرفی خود به دیگران',
-      'خداحافظی کردن',
-    ],
-    lessons: [
-      { id: 'basic-greetings', title: 'سلام و خداحافظی' },
-      { id: 'how-are-you', title: 'حالت چطور است؟' },
-      { id: 'introductions', title: 'معرفی خود' },
-      { id: 'formal-informal', title: 'رسمی و غیررسمی' },
-    ],
-    tips: 'این عبارات را با صدای بلند تمرین کنید. سعی کنید هر روز استفاده کنید.',
-  },
-  {
-    phase: 3,
-    title: 'مرحله ۳: ضمایر و ساختار جمله',
-    titlePashto: 'دریم پړاو: ضمیرونه او جملې جوړښت',
-    duration: '۱-۲ هفته',
-    icon: Users,
-    color: 'blue',
-    description: 'یادگیری ضمایر و ساختار پایه جملات پشتو',
-    goals: [
-      'ضمایر شخصی (زه، ته، هغه...)',
-      'ضمایر ملکی (زما، ستا، د هغه...)',
-      'ساختار SOV جملات پشتو',
-      'تفاوت رسمی و غیررسمی',
-    ],
-    lessons: [
-      { id: 'pronouns', title: 'ضمایر شخصی' },
-      { id: 'possessive-pronouns', title: 'ضمایر ملکی' },
-      { id: 'demonstratives', title: 'ضمایر اشاره' },
-      { id: 'sentence-structure', title: 'ساختار جمله SOV' },
-    ],
-    tips: 'پشتو ساختار SOV دارد: فاعل + مفعول + فعل. این را همیشه به یاد داشته باشید.',
-  },
-  {
-    phase: 4,
-    title: 'مرحله ۴: دستور زبان میانی',
-    titlePashto: 'څلورم پړاو: منځنی ګرامر',
-    duration: '۲ هفته',
-    icon: BookOpen,
-    color: 'red',
-    description: 'یادگیری قواعد دستوری پیشرفته‌تر',
-    goals: [
-      'جنسیت اسم‌ها (مذکر/مونث)',
-      'جمع بستن اسم‌ها',
-      'صفت‌ها و تطابق',
-      'حروف اضافه',
-      'جملات سوالی و منفی',
-    ],
-    lessons: [
-      { id: 'gender', title: 'جنسیت اسم‌ها' },
-      { id: 'plural', title: 'جمع بستن' },
-      { id: 'adjectives', title: 'صفت‌ها' },
-      { id: 'prepositions', title: 'حروف اضافه' },
-      { id: 'questions', title: 'جملات سوالی' },
-      { id: 'negation', title: 'جملات منفی' },
-    ],
-    tips: 'در پشتو جنسیت اسم‌ها مهم است و صفت باید با اسم تطابق داشته باشد.',
-  },
-  {
-    phase: 5,
-    title: 'مرحله ۵: واژگان پایه',
-    titlePashto: 'پنځم پړاو: بنسټیز لغات',
-    duration: '۲ هفته',
-    icon: Library,
-    color: 'teal',
-    description: 'یادگیری کلمات ضروری برای مکالمه روزمره',
-    goals: [
-      'اعضای خانواده',
-      'اعداد ۱ تا ۱۰۰',
-      'غذا و نوشیدنی',
-      'اعضای بدن',
-      'رنگ‌ها و روزها',
-    ],
-    lessons: [
-      { id: 'family', title: 'خانواده' },
-      { id: 'numbers-11-100', title: 'اعداد ۱۱-۱۰۰' },
-      { id: 'food', title: 'غذا و نوشیدنی' },
-      { id: 'body-parts', title: 'اعضای بدن' },
-      { id: 'colors', title: 'رنگ‌ها' },
-      { id: 'days-months', title: 'روزها و ماه‌ها' },
-    ],
-    tips: 'هر روز ۱۰ کلمه جدید یاد بگیرید. کارت‌های فلش درست کنید.',
-  },
-  {
-    phase: 6,
-    title: 'مرحله ۶: فعل‌های زمان حال',
-    titlePashto: 'شپږم پړاو: اوسمهال فعلونه',
-    duration: '۲-۳ هفته',
-    icon: Play,
-    color: 'amber',
-    description: 'یادگیری صرف فعل‌های پرکاربرد در زمان حال',
-    goals: [
-      'فعل بودن (یم، یې، دی...)',
-      'فعل‌های حرکتی (ځم، راځم)',
-      'فعل‌های روزمره (خورم، څښم، کوم)',
-      'فعل خواستن (غواړم)',
-      'فعل‌های کمکی (باید، کولی شی، توانیدل)',
-      'فعل‌های انتقالی (نیول، ورکول، پرېږدل)',
-    ],
-    lessons: [
-      { id: 'verb-to-be', title: 'فعل بودن' },
-      { id: 'verb-to-go', title: 'فعل رفتن' },
-      { id: 'verb-to-come', title: 'فعل آمدن' },
-      { id: 'verb-to-eat', title: 'فعل خوردن' },
-      { id: 'verb-to-drink', title: 'فعل نوشیدن' },
-      { id: 'verb-to-do', title: 'فعل کردن' },
-      { id: 'verb-to-pour', title: 'فعل ریختن' },
-      { id: 'verb-to-want', title: 'فعل خواستن' },
-      { id: 'modal-verbs', title: 'فعل‌های کمکی' },
-      { id: 'transitive-verbs', title: 'فعل‌های انتقالی' },
-    ],
-    tips: 'از صفحه صرف فعل استفاده کنید. هر فعل را با تمام ضمایر تمرین کنید.',
-  },
-  {
-    phase: 7,
-    title: 'مرحله ۷: فعل‌های زمان گذشته',
-    titlePashto: 'اووم پړاو: تېرمهال فعلونه',
-    duration: '۲ هفته',
-    icon: Clock,
-    color: 'violet',
-    description: 'یادگیری صرف فعل‌ها در زمان گذشته',
-    goals: [
-      'ساختار گذشته ساده',
-      'فعل‌های بی‌قاعده در گذشته',
-      'تفاوت گذشته و حال',
-      'جملات منفی گذشته',
-    ],
-    lessons: [
-      { id: 'past-simple', title: 'گذشته ساده' },
-      { id: 'past-to-be', title: 'بودم (وم)' },
-      { id: 'past-to-go', title: 'رفتم (لاړم)' },
-      { id: 'past-to-come', title: 'آمدم (راغلم)' },
-      { id: 'past-to-eat', title: 'خوردم (وخوړم)' },
-      { id: 'past-to-drink', title: 'نوشیدم (وڅښم)' },
-      { id: 'past-to-do', title: 'کردم (وکړم)' },
-      { id: 'past-to-pour', title: 'ریختم (وریخت)' },
-      { id: 'past-to-see', title: 'دیدم (ولیدم)' },
-    ],
-    tips: 'در پشتو، پیشوند «و» معمولاً نشانه گذشته است.',
-  },
-  {
-    phase: 8,
-    title: 'مرحله ۸: آینده و امری',
-    titlePashto: 'اتم پړاو: راتلونکي او امري',
-    duration: '۲ هفته',
-    icon: ArrowRight,
-    color: 'cyan',
-    description: 'یادگیری زمان آینده و فعل امری',
-    goals: [
-      'ساختار زمان آینده',
-      'فعل امری رسمی و غیررسمی',
-      'درخواست کردن مودبانه',
-    ],
-    lessons: [
-      { id: 'future-tense', title: 'زمان آینده' },
-      { id: 'future-to-be', title: 'خواهم بود (به یم)' },
-      { id: 'future-to-go', title: 'خواهم رفت (به ځم)' },
-      { id: 'future-to-come', title: 'خواهم آمد (به راځم)' },
-      { id: 'future-to-eat', title: 'خواهم خورد (به خورم)' },
-      { id: 'future-to-drink', title: 'خواهم نوشید (به څښم)' },
-      { id: 'future-to-do', title: 'خواهم کرد (به کوم)' },
-      { id: 'future-to-pour', title: 'خواهم ریخت (به ریختم)' },
-      { id: 'imperative', title: 'فعل امری' },
-      { id: 'imperative-formal', title: 'امری رسمی' },
-      { id: 'requests', title: 'درخواست کردن' },
-    ],
-    tips: 'برای آینده از «به» + فعل استفاده می‌شود.',
-  },
-  {
-    phase: 9,
-    title: 'مرحله ۹: فعل‌های جامع',
-    titlePashto: 'نهم پړاو: د فعلونو مجموعه',
-    duration: '۱ هفته',
-    icon: Play,
-    color: 'amber',
-    description: 'یادگیری فعل‌های اساسی در تمام زمان‌ها',
-    goals: [
-      'فعل‌های اساسی در حال، گذشته و آینده',
-      'تطبیق فعل‌ها با ضمایر مختلف',
-      'درک الگوهای صرف فعل',
-    ],
-    lessons: [
-      { id: 'comprehensive-verbs', title: 'فعل‌های اساسی - تمام زمان‌ها' },
-    ],
-    tips: 'این درس جامع تمام زمان‌های فعل را پوشش می‌دهد. قبل از شروع، درس‌های فعل حال و گذشته را مرور کنید.',
-  },
-  {
-    phase: 10,
-    title: 'مرحله ۱۰: مکالمات روزمره',
-    titlePashto: 'لسم پړاو: ورځنۍ خبرې',
-    duration: '۳-۴ هفته',
-    icon: MessageCircle,
-    color: 'orange',
-    description: 'تمرین مکالمه در موقعیت‌های واقعی',
-    goals: [
-      'خرید در بازار و چانه زدن',
-      'سفارش غذا در رستوران',
-      'گرفتن تاکسی و مسیریابی',
-      'مکالمه تلفنی',
-      'رفتن به داکتر',
-      'مهمانی و پذیرایی',
-    ],
-    lessons: [
-      { id: 'conv-shopping', title: 'در بازار' },
-      { id: 'conv-restaurant', title: 'در رستوران' },
-      { id: 'conv-taxi', title: 'در تاکسی' },
-      { id: 'conv-phone', title: 'مکالمه تلفنی' },
-      { id: 'conv-doctor', title: 'در مطب داکتر' },
-      { id: 'conv-guest', title: 'مهمانی' },
-    ],
-    tips: 'این مکالمات را با صدای بلند تمرین کنید. نقش هر دو طرف را بازی کنید.',
-  },
-  {
-    phase: 11,
-    title: 'مرحله ۱۱: پیشرفته و اصطلاحات',
-    titlePashto: 'یولسم پړاو: پرمختللی',
-    duration: 'مداوم',
-    icon: Star,
-    color: 'purple',
-    description: 'یادگیری اصطلاحات و ضرب‌المثل‌های کندهاری',
-    goals: [
-      'صداهای برگشته پیشرفته',
-      'اصطلاحات روزمره',
-      'ضرب‌المثل‌های پشتو',
-      'اصطلاحات خاص کندهاری',
-      'غذا و پخت و پز پیشرفته',
-      'اعضای بدن پیشرفته',
-    ],
-    lessons: [
-      { id: 'retroflex', title: 'صداهای برگشته' },
-      { id: 'idioms', title: 'اصطلاحات' },
-      { id: 'proverbs', title: 'ضرب‌المثل‌ها' },
-      { id: 'kandahari-slang', title: 'اصطلاحات کندهاری' },
-      { id: 'advanced-food-cooking', title: 'کولو (Cooking)' },
-      { id: 'advanced-body-parts', title: 'جسم کے حصے' },
-    ],
-    tips: 'با پشتوزبانان صحبت کنید. فیلم و موسیقی پشتو گوش کنید. درس‌های پیشرفته را برای تعمق بیشتر ببینید.',
-  },
-];
+import { roadmapData } from '../data/roadmap';
 
 const colorClasses = {
   emerald: { bg: 'bg-emerald-500/20', border: 'border-emerald-500/50', text: 'text-emerald-400', icon: 'bg-emerald-500' },
@@ -313,6 +41,7 @@ export default function RoadmapPage() {
 
   const completedCount = progress?.completedPhases?.length || 0;
   const progressPercentage = (completedCount / roadmapData.length) * 100;
+  const totalLessons = roadmapData.reduce((acc, p) => acc + p.lessons.length, 0);
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -327,7 +56,7 @@ export default function RoadmapPage() {
             <p className="text-slate-400">د زده کړې لارښود - مسیر کامل یادگیری پشتو کندهاری</p>
           </div>
         </div>
-        
+
         {/* Progress Bar */}
         <div className="mt-4">
           <div className="flex justify-between text-sm mb-2">
@@ -335,7 +64,7 @@ export default function RoadmapPage() {
             <span className="text-indigo-400 font-bold">{Math.round(progressPercentage)}%</span>
           </div>
           <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
               style={{ width: `${progressPercentage}%` }}
             />
@@ -348,20 +77,20 @@ export default function RoadmapPage() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center shadow-md">
           <Target className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۱۱</p>
-          <p className="text-xs text-slate-500">مرحله</p>
+          <p className="text-2xl font-bold text-slate-100">{roadmapData.length}</p>
+          <p className="text-xs text-slate-500 font-medium">مرحله</p>
         </div>
-        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center shadow-md">
           <Zap className="w-8 h-8 text-amber-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۵۷</p>
-          <p className="text-xs text-slate-500">درس</p>
+          <p className="text-2xl font-bold text-slate-100">{totalLessons}</p>
+          <p className="text-xs text-slate-500 font-medium">درس کل</p>
         </div>
-        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center shadow-md">
           <Trophy className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-slate-100">۳-۴</p>
-          <p className="text-xs text-slate-500">ماه</p>
+          <p className="text-2xl font-bold text-slate-100">۸۰٪</p>
+          <p className="text-xs text-slate-500 font-medium">رضایت کاربران</p>
         </div>
       </div>
 
@@ -374,11 +103,10 @@ export default function RoadmapPage() {
           const Icon = phase.icon;
 
           return (
-            <div 
+            <div
               key={phase.phase}
-              className={`bg-slate-800 rounded-2xl border transition-all ${
-                isCompleted ? 'border-emerald-500/50' : 'border-slate-700'
-              }`}
+              className={`bg-slate-800 rounded-2xl border transition-all ${isCompleted ? 'border-emerald-500/50' : 'border-slate-700'
+                }`}
             >
               {/* Phase Header */}
               <button
@@ -397,9 +125,8 @@ export default function RoadmapPage() {
                   )}
                   {/* Connector Line */}
                   {idx < roadmapData.length - 1 && (
-                    <div className={`absolute top-12 right-1/2 w-0.5 h-8 ${
-                      isCompleted ? 'bg-emerald-500' : 'bg-slate-600'
-                    }`} />
+                    <div className={`absolute top-12 right-1/2 w-0.5 h-8 ${isCompleted ? 'bg-emerald-500' : 'bg-slate-600'
+                      }`} />
                   )}
                 </div>
 
@@ -473,11 +200,10 @@ export default function RoadmapPage() {
                   {/* Complete Button */}
                   <button
                     onClick={() => toggleComplete(phase.phase)}
-                    className={`mt-4 w-full py-3 rounded-xl font-bold transition-all ${
-                      isCompleted
-                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50'
-                        : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                    }`}
+                    className={`mt-4 w-full py-3 rounded-xl font-bold transition-all ${isCompleted
+                      ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                      }`}
                   >
                     {isCompleted ? '✓ تکمیل شده' : 'علامت‌گذاری به عنوان تکمیل شده'}
                   </button>

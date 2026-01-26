@@ -18,78 +18,80 @@ import { possessivePronounsLesson } from './possessive-pronouns';
 import { demonstrativesLesson } from './demonstratives';
 import { sentenceStructureLesson } from './sentence-structure';
 
-// ۴. فعل حال (Present Tense Verbs)
-import { verbToBeLesson } from './verb-to-be';
-import { verbToGoLesson } from './verb-to-go';
-import { verbToComeLesson } from './verb-to-come';
-import { verbToEatLesson } from './verb-to-eat';
-import { verbToDrinkLesson } from './verb-to-drink';
-import { verbToDoLesson } from './verb-to-do';
-import { verbToPourLesson } from './verb-to-pour';
-import { verbToWantLesson } from './verb-to-want';
-import { verbToHitLesson } from './verb-to-hit';
-import { verbToWashLesson } from './verb-to-wash';
-import { verbToGiveLesson } from './verb-to-give';
-import { verbToTakeLesson } from './verb-to-take';
-import { verbToStandLesson } from './verb-to-stand';
-import { verbToRunLesson } from './verb-to-run';
-import { verbToCloseLesson } from './verb-to-close';
-import { verbToOpenLesson } from './verb-to-open';
-import { modalVerbsLesson } from './modal-verbs';
-import { transitiveVerbsLesson } from './transitive-verbs';
-
-// ۴.۵ فعل‌های جامع (Comprehensive Verbs - All Tenses)
+// ۶. راهنمای جامع افعال (Comprehensive Verb Guide)
+import { verbsUnifiedRulesLesson } from './verbs-unified-rules';
+import { verbCompToBeLesson } from './verb-comp-to-be';
+import { verbCompToGoLesson } from './verb-comp-to-go';
+import { verbCompToComeLesson } from './verb-comp-to-come';
+import { verbCompToEatLesson } from './verb-comp-to-eat';
+import { verbCompToDrinkLesson } from './verb-comp-to-drink';
+import { verbCompToDoLesson } from './verb-comp-to-do';
+import { verbCompToWantLesson } from './verb-comp-to-want';
+import { verbCompToSeeLesson } from './verb-comp-to-see';
+import { verbCompToSayLesson } from './verb-comp-to-say';
+import { verbCompToHearLesson } from './verb-comp-to-hear';
+import { verbCompToWriteLesson } from './verb-comp-to-write';
+import { verbCompToReadLesson } from './verb-comp-to-read';
+import { verbCompToHaveLesson } from './verb-comp-to-have';
+import { verbCompToHitLesson } from './verb-comp-to-hit';
+import { verbCompToWashLesson } from './verb-comp-to-wash';
+import { verbCompToGiveLesson } from './verb-comp-to-give';
+import { verbCompToTakeLesson } from './verb-comp-to-take';
+import { verbCompToStandLesson } from './verb-comp-to-stand';
+import { verbCompToRunLesson } from './verb-comp-to-run';
+import { verbCompToCloseLesson } from './verb-comp-to-close';
+import { verbCompToOpenLesson } from './verb-comp-to-open';
+import { verbCompToCarryLesson } from './verb-comp-to-carry';
+import { verbCompToBringLesson } from './verb-comp-to-bring';
+import { verbCompToUnderstandLesson } from './verb-comp-to-understand';
+import { verbCompToSitLesson } from './verb-comp-to-sit';
+import { verbCompToSleepLesson } from './verb-comp-to-sleep';
+import { verbCompToBecomeLesson } from './verb-comp-to-become';
+import { verbCompToLoveLesson } from './verb-comp-to-love';
+import { verbCompToWorkLesson } from './verb-comp-to-work';
+import { verbCompToSpeakLesson } from './verb-comp-to-speak';
+import { verbCompToLiveLesson } from './verb-comp-to-live';
+import { verbCompToLearnLesson } from './verb-comp-to-learn';
+import { verbCompToArriveLesson } from './verb-comp-to-arrive';
+import { verbCompToWakeUpLesson } from './verb-comp-to-wake-up';
+import { verbCompToWalkLesson } from './verb-comp-to-walk';
+import { verbCompToPourLesson } from './verb-comp-to-pour';
+import { verbCompToLeaveLesson } from './verb-comp-to-leave';
+import { verbCompToStartLesson } from './verb-comp-to-start';
+import { verbCompToExtractLesson } from './verb-comp-to-extract';
 import { comprehensiveVerbsLesson } from './comprehensive-verbs';
 
-// ۵. واژگان پایه (Basic Vocabulary)
+// سایر درس‌ها
 import { familyLesson } from './family';
 import { numbers11to100Lesson } from './numbers-11-100';
 import { foodLesson } from './food';
 import { bodyPartsLesson } from './body-parts';
 import { colorsLesson } from './colors';
 import { daysMonthsLesson } from './days-months';
-
-// ۶. فعل گذشته (Past Tense Verbs)
-import { pastSimpleLesson } from './past-simple';
-import { pastToBeLesson } from './past-to-be';
-import { pastToGoLesson } from './past-to-go';
-import { pastToComeLesson } from './past-to-come';
-import { pastToEatLesson } from './past-to-eat';
-import { pastToDrinkLesson } from './past-to-drink';
-import { pastToDoLesson } from './past-to-do';
-import { pastToPourLesson } from './past-to-pour';
-import { pastToSeeLesson } from './past-to-see';
-
-// ۷. دستور زبان میانی (Intermediate Grammar)
+import { householdObjectsLesson } from './household-objects';
+import { clothingAppearanceLesson } from './clothing-appearance';
+import { cityLocationsLesson } from './city-locations';
+import { emotionsFeelingsLesson } from './emotions-feelings';
+import { weatherNatureLesson } from './weather-nature';
 import { genderLesson } from './gender';
 import { pluralLesson } from './plural';
 import { adjectivesLesson } from './adjectives';
 import { prepositionsLesson } from './prepositions';
 import { questionsLesson } from './questions';
 import { negationLesson } from './negation';
-
-// ۸. فعل آینده و امری (Future & Imperative)
-import { futureTenseLesson } from './future-tense';
-import { futureToBeLesson } from './future-to-be';
-import { futureToGoLesson } from './future-to-go';
-import { futureToComeLessson } from './future-to-come';
-import { futureToEatLesson } from './future-to-eat';
-import { futureToDrinkLesson } from './future-to-drink';
-import { futureToDoLesson } from './future-to-do';
-import { futureToPourLesson } from './future-to-pour';
-import { imperativeLesson } from './imperative';
-import { imperativeFormalLesson } from './imperative-formal';
+import { directionalPrefixesLesson } from './directional-prefixes';
+import { obliqueCaseLesson } from './oblique-case';
+import { vocativeCaseLesson } from './vocative-case';
 import { requestsLesson } from './requests';
-
-// ۹. مکالمات روزمره (Daily Conversations)
 import { convShoppingLesson } from './conv-shopping';
 import { convRestaurantLesson } from './conv-restaurant';
 import { convTaxiLesson } from './conv-taxi';
 import { convPhoneLesson } from './conv-phone';
 import { convDoctorLesson } from './conv-doctor';
 import { convGuestLesson } from './conv-guest';
-
-// ۱۰. پیشرفته (Advanced)
+import { convMarketDisputeLesson } from './conv-market-dispute';
+import { convJobInterviewLesson } from './conv-job-interview';
+import { convDirectionsLesson } from './conv-directions';
 import { retroflexLesson } from './retroflex';
 import { idiomsLesson } from './idioms';
 import { proverbsLesson } from './proverbs';
@@ -107,40 +109,62 @@ export const lessons = [
   kandahariSoundsLesson,
   vowelsLesson,
   numbers1to10Lesson,
-  
+
   // ۲. سلام و احوالپرسی
   basicGreetingsLesson,
   howAreYouLesson,
   introductionsLesson,
   formalInformalLesson,
-  
+
   // ۳. ضمایر و پایه‌ها
   pronounsLesson,
   possessivePronounsLesson,
   demonstrativesLesson,
   sentenceStructureLesson,
-  
-  // ۴. فعل حال
-  verbToBeLesson,
-  verbToGoLesson,
-  verbToComeLesson,
-  verbToEatLesson,
-  verbToDrinkLesson,
-  verbToDoLesson,
-  verbToPourLesson,
-  verbToWantLesson,
-  verbToHitLesson,
-  verbToWashLesson,
-  verbToGiveLesson,
-  verbToTakeLesson,
-  verbToStandLesson,
-  verbToRunLesson,
-  verbToCloseLesson,
-  verbToOpenLesson,
-  modalVerbsLesson,
-  transitiveVerbsLesson,
+
+  // ۶. راهنمای جامع افعال
+  verbsUnifiedRulesLesson,
+  verbCompToBeLesson,
+  verbCompToGoLesson,
+  verbCompToComeLesson,
+  verbCompToStandLesson,
+  verbCompToSitLesson,
+  verbCompToSleepLesson,
+  verbCompToBecomeLesson,
+  verbCompToUnderstandLesson,
+  verbCompToArriveLesson,
+  verbCompToWakeUpLesson,
+  verbCompToWalkLesson,
+  verbCompToEatLesson,
+  verbCompToDrinkLesson,
+  verbCompToDoLesson,
+  verbCompToWantLesson,
+  verbCompToSeeLesson,
+  verbCompToSayLesson,
+  verbCompToHearLesson,
+  verbCompToWriteLesson,
+  verbCompToReadLesson,
+  verbCompToHaveLesson,
+  verbCompToHitLesson,
+  verbCompToWashLesson,
+  verbCompToGiveLesson,
+  verbCompToTakeLesson,
+  verbCompToRunLesson,
+  verbCompToCloseLesson,
+  verbCompToOpenLesson,
+  verbCompToCarryLesson,
+  verbCompToBringLesson,
+  verbCompToLoveLesson,
+  verbCompToWorkLesson,
+  verbCompToSpeakLesson,
+  verbCompToLiveLesson,
+  verbCompToLearnLesson,
+  verbCompToPourLesson,
+  verbCompToLeaveLesson,
+  verbCompToStartLesson,
+  verbCompToExtractLesson,
   comprehensiveVerbsLesson,
-  
+
   // ۵. واژگان پایه
   familyLesson,
   numbers11to100Lesson,
@@ -148,18 +172,12 @@ export const lessons = [
   bodyPartsLesson,
   colorsLesson,
   daysMonthsLesson,
-  
-  // ۶. فعل گذشته
-  pastSimpleLesson,
-  pastToBeLesson,
-  pastToGoLesson,
-  pastToComeLesson,
-  pastToEatLesson,
-  pastToDrinkLesson,
-  pastToDoLesson,
-  pastToPourLesson,
-  pastToSeeLesson,
-  
+  householdObjectsLesson,
+  clothingAppearanceLesson,
+  cityLocationsLesson,
+  emotionsFeelingsLesson,
+  weatherNatureLesson,
+
   // ۷. دستور زبان میانی
   genderLesson,
   pluralLesson,
@@ -167,20 +185,10 @@ export const lessons = [
   prepositionsLesson,
   questionsLesson,
   negationLesson,
-  
-  // ۸. فعل آینده و امری
-  futureTenseLesson,
-  futureToBeLesson,
-  futureToGoLesson,
-  futureToComeLessson,
-  futureToEatLesson,
-  futureToDrinkLesson,
-  futureToDoLesson,
-  futureToPourLesson,
-  imperativeLesson,
-  imperativeFormalLesson,
-  requestsLesson,
-  
+  directionalPrefixesLesson,
+  obliqueCaseLesson,
+  vocativeCaseLesson,
+
   // ۹. مکالمات روزمره
   convShoppingLesson,
   convRestaurantLesson,
@@ -188,7 +196,11 @@ export const lessons = [
   convPhoneLesson,
   convDoctorLesson,
   convGuestLesson,
-  
+  convMarketDisputeLesson,
+  convJobInterviewLesson,
+  convDirectionsLesson,
+  requestsLesson,
+
   // ۱۰. پیشرفته
   retroflexLesson,
   idiomsLesson,
@@ -215,11 +227,13 @@ export function getNextLesson(currentId) {
   const allLessonIds = categoriesData.categories.flatMap(c => c.lessons.map(l => l.id));
   const currentIndex = allLessonIds.indexOf(currentId);
   if (currentIndex === -1 || currentIndex === allLessonIds.length - 1) return null;
-  
+
   const nextId = allLessonIds[currentIndex + 1];
-  return getLessonById(nextId) || { id: nextId, title: categoriesData.categories
-    .flatMap(c => c.lessons)
-    .find(l => l.id === nextId)?.title || nextId };
+  return getLessonById(nextId) || {
+    id: nextId, title: categoriesData.categories
+      .flatMap(c => c.lessons)
+      .find(l => l.id === nextId)?.title || nextId
+  };
 }
 
 // Get previous lesson
@@ -227,11 +241,13 @@ export function getPrevLesson(currentId) {
   const allLessonIds = categoriesData.categories.flatMap(c => c.lessons.map(l => l.id));
   const currentIndex = allLessonIds.indexOf(currentId);
   if (currentIndex <= 0) return null;
-  
+
   const prevId = allLessonIds[currentIndex - 1];
-  return getLessonById(prevId) || { id: prevId, title: categoriesData.categories
-    .flatMap(c => c.lessons)
-    .find(l => l.id === prevId)?.title || prevId };
+  return getLessonById(prevId) || {
+    id: prevId, title: categoriesData.categories
+      .flatMap(c => c.lessons)
+      .find(l => l.id === prevId)?.title || prevId
+  };
 }
 
 // Get lesson progress info
