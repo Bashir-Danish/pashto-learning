@@ -17,9 +17,11 @@ import { pronounsLesson } from './pronouns';
 import { possessivePronounsLesson } from './possessive-pronouns';
 import { demonstrativesLesson } from './demonstratives';
 import { sentenceStructureLesson } from './sentence-structure';
+import { conjunctionsLesson } from './conjunctions';
 
 // ۶. راهنمای جامع افعال (Comprehensive Verb Guide)
 import { verbsUnifiedRulesLesson } from './verbs-unified-rules';
+import { progressiveTensesLesson } from './progressive-tenses';
 import { verbCompToBeLesson } from './verb-comp-to-be';
 import { verbCompToGoLesson } from './verb-comp-to-go';
 import { verbCompToComeLesson } from './verb-comp-to-come';
@@ -80,6 +82,7 @@ import { prepositionsLesson } from './prepositions';
 import { questionsLesson } from './questions';
 import { negationLesson } from './negation';
 import { directionalPrefixesLesson } from './directional-prefixes';
+import { compoundPrepositionsLesson } from './compound-prepositions';
 import { obliqueCaseLesson } from './oblique-case';
 import { vocativeCaseLesson } from './vocative-case';
 import { requestsLesson } from './requests';
@@ -120,10 +123,12 @@ export const lessons = [
   pronounsLesson,
   possessivePronounsLesson,
   demonstrativesLesson,
+  conjunctionsLesson,
   sentenceStructureLesson,
 
   // ۶. راهنمای جامع افعال
   verbsUnifiedRulesLesson,
+  progressiveTensesLesson,
   verbCompToBeLesson,
   verbCompToGoLesson,
   verbCompToComeLesson,
@@ -186,6 +191,7 @@ export const lessons = [
   questionsLesson,
   negationLesson,
   directionalPrefixesLesson,
+  compoundPrepositionsLesson,
   obliqueCaseLesson,
   vocativeCaseLesson,
 

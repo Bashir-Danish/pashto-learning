@@ -23,6 +23,7 @@ const quickAccess = [
 
 export default function Sidebar({ isOpen, onClose }) {
   const { isLessonComplete, getCategoryProgress } = useProgress();
+  // Force update check
   const [expandedCategory, setExpandedCategory] = useState('basics');
 
   const toggleCategory = (categoryId) => {

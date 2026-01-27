@@ -65,6 +65,7 @@ export const roadmapData = [
             { id: 'pronouns', title: 'ضمایر شخصی' },
             { id: 'possessive-pronouns', title: 'ضمایر ملکی' },
             { id: 'demonstratives', title: 'ضمایر اشاره' },
+            { id: 'conjunctions', title: 'کلمات ربط (هم، او، خو)' },
             { id: 'sentence-structure', title: 'ساختار جمله SOV' },
         ],
         tips: 'پشتو برخلاف انگلیسی، فعل را همیشه در انتهای جمله می‌آورد.',
@@ -91,6 +92,7 @@ export const roadmapData = [
             { id: 'questions', title: 'جملات سوالی' },
             { id: 'negation', title: 'جملات منفی' },
             { id: 'directional-prefixes', title: 'جادوی پیشوندهای جهتی (Rā/Dar/War)' },
+            { id: 'compound-prepositions', title: 'ترکیب‌های جادویی (درڅخه/ورڅخه)' },
             { id: 'oblique-case', title: 'تغییر شکل کلمات (حالت مغیره)' },
             { id: 'vocative-case', title: 'چطور کسی را صدا بزنیم؟ (حالت ندایی)' },
         ],
@@ -141,6 +143,7 @@ export const roadmapData = [
         ],
         lessons: [
             { id: 'verbs-unified-rules', title: 'قواعد جامع افعال' },
+            { id: 'progressive-tenses', title: 'زمان‌های جاری (استمراری)' },
             { id: 'verb-comp-to-be', title: '۱. بودن (اوسېدل)' },
             { id: 'verb-comp-to-go', title: '۲. رفتن (تلل)' },
             { id: 'verb-comp-to-come', title: '۳. آمدن (راتلل)' },

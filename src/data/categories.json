@@ -115,8 +115,14 @@
           "id": "demonstratives",
           "title": "ضمایر اشاره",
           "titleFa": "ضمایر اشاره",
+          "difficulty": "easy"
+        },
+        {
+          "id": "conjunctions",
+          "title": "کلمات ربط",
+          "titleFa": "کلمات ربط (هم، او، خو)",
           "difficulty": "easy",
-          "duration": "۱۵ دقیقه"
+          "duration": "۲۰ دقیقه"
         },
         {
           "id": "sentence-structure",
@@ -185,6 +191,13 @@
           "titleFa": "۱. جادوی پیشوندهای جهتی (Rā/Dar/War)",
           "difficulty": "hard",
           "duration": "۲۵ دقیقه"
+        },
+        {
+          "id": "compound-prepositions",
+          "title": "ترکیب‌های جادویی (درڅخه/ورڅخه)",
+          "titleFa": "ترکیب‌های جادویی (درڅخه/ورڅخه)",
+          "difficulty": "hard",
+          "duration": "۳۰ دقیقه"
         },
         {
           "id": "oblique-case",
@@ -307,6 +320,13 @@
           "titleFa": "۱. نقشه‌ی راه افعال (قواعد کلی)",
           "difficulty": "hard",
           "duration": "۳۰ دقیقه"
+        },
+        {
+          "id": "progressive-tenses",
+          "title": "زمان‌های جاری (استمراری)",
+          "titleFa": "زمان‌های جاری (استمراری)",
+          "difficulty": "medium",
+          "duration": "۲۰ دقیقه"
         },
         {
           "id": "verb-comp-to-be",
