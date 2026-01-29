@@ -3,6 +3,7 @@ import { BookOpen, BarChart3, Menu, Trophy, Flame, Users, RefreshCw } from 'luci
 import { useProgress } from '../../contexts/ProgressContext';
 import { useUser } from '../../contexts/UserContext';
 import { useState } from 'react';
+import NotesManager from '../Notes/NotesManager';
 
 export default function Header({ onMenuClick }) {
   const { progress } = useProgress();
@@ -78,6 +79,9 @@ export default function Header({ onMenuClick }) {
             >
               <RefreshCw className={`w-5 h-5 text-cyan-400 transition-all ${isRefreshing ? 'animate-spin' : 'group-hover:rotate-180 duration-500'}`} />
             </button>
+
+            {/* Notes Manager */}
+            <NotesManager />
 
             {/* Streak */}
             <div className="flex items-center gap-1.5 px-2 sm:px-4 py-1.5 sm:py-2.5 bg-slate-800/40 rounded-xl border border-orange-500/20 hover:border-orange-500/40 transition-all shadow-inner shadow-orange-500/5 group">

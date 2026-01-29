@@ -39,9 +39,10 @@ export default function RoadmapPage() {
     }
   };
 
-  const completedCount = progress?.completedPhases?.length || 0;
-  const progressPercentage = (completedCount / roadmapData.length) * 100;
+  const completedPhasesCount = progress?.completedPhases?.length || 0;
+  const completedLessonsCount = progress?.completedLessons?.length || 0;
   const totalLessons = roadmapData.reduce((acc, p) => acc + p.lessons.length, 0);
+  const progressPercentage = totalLessons > 0 ? (completedLessonsCount / totalLessons) * 100 : 0;
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -70,7 +71,7 @@ export default function RoadmapPage() {
             />
           </div>
           <p className="text-xs text-slate-500 mt-2">
-            {completedCount} از {roadmapData.length} مرحله تکمیل شده
+            {completedLessonsCount} از {totalLessons} درس تکمیل شده • {completedPhasesCount} از {roadmapData.length} مرحله
           </p>
         </div>
       </div>
